@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Bindu</title>
+  <meta
+    name="description"
+    content="Get in touch with Bindu for yoga classes, private sessions, art commissions, workshops, and collaborations."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Bindu</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="yoga.html">Yoga</a>
+        <a href="art.html">Art</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes & Events</a>
+        <a href="contact.html" class="active nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1>Get in touch</h1>
+          <p class="hero-description">
+            Reach out for yoga classes, private sessions, workshops, art
+            commissions, or community collaborations.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Contact details</h3>
+          <p>Email: hello@example.com</p>
+          <p>Instagram: @yourinstagram</p>
+          <p>Response time: 1–3 business days</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2>Send a message</h2>
+          <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" />
+
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inquiry" name="inquiry">
+              <option>Yoga Classes</option>
+              <option>Private Yoga Session</option>
+              <option>Art Commission</option>
+              <option>Workshop Collaboration</option>
+              <option>General Question</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="How can I help?"></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-sidebar">
+          <article class="info-card">
+            <h3>Yoga inquiries</h3>
+            <p>Ask about class schedules, private sessions, or workshops.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Art inquiries</h3>
+            <p>Reach out for commissions, featured pieces, or creative collaborations.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Community events</h3>
+            <p>Libraries, local groups, and wellness spaces can inquire here as well.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner section">
+      <div class="container cta-banner-inner">
+        <div>
+          <p class="eyebrow">Explore more</p>
+          <h2>Browse yoga, art, and upcoming classes</h2>
+        </div>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Bindu</h3>
+        <p>For yoga, art, workshops, and community collaborations.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="yoga.html">Yoga</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="classes.html">Classes & Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Bindu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
