@@ -54,11 +54,11 @@ ul {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4.25rem 0;
 }
 
 .compact-section {
-  padding: 4rem 0;
+  padding: 3.2rem 0;
 }
 
 .soft-section {
@@ -123,8 +123,8 @@ ul {
 }
 
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -222,11 +222,11 @@ ul {
 }
 
 .page-hero {
-  padding: 5rem 0 4rem;
+  padding: 4rem 0 3rem;
 }
 
 .compact-hero {
-  padding: 4rem 0 3.5rem;
+  padding: 3.2rem 0 2.6rem;
 }
 
 .page-hero-grid {
@@ -255,7 +255,8 @@ ul {
 }
 
 .home-simple-hero {
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.2rem;
 }
 
 .home-logo-space {
@@ -265,8 +266,8 @@ ul {
 }
 
 .hero-logo {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
 }
 
@@ -279,7 +280,7 @@ ul {
   border: 1px solid rgba(237, 216, 204, 0.8);
   border-radius: 999px;
   padding: 0.8rem 1.1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
   box-shadow: 0 6px 18px rgba(90, 64, 50, 0.04);
 }
 
@@ -290,7 +291,7 @@ ul {
 
 .home-headline-wrap {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 
 .home-headline {
@@ -318,8 +319,8 @@ ul {
 .path-card {
   position: relative;
   display: block;
-  padding: 2.2rem;
-  min-height: 320px;
+  padding: 1.8rem;
+  min-height: 280px;
   border: 1px solid rgba(237, 216, 204, 0.5);
   transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
 }
@@ -427,7 +428,7 @@ ul {
 
 .info-card,
 .testimonial-card {
-  padding: 1.8rem;
+  padding: 1.4rem;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
@@ -455,12 +456,12 @@ ul {
 .offering-row {
   display: grid;
   grid-template-columns: 1.4fr 0.6fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: start;
   background: #fff8f4;
   border: none;
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1.7rem;
+  padding: 1.3rem 1.4rem;
   box-shadow: 0 4px 14px rgba(90, 64, 50, 0.05);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -504,10 +505,10 @@ ul {
 
 .event-card {
   display: grid;
-  grid-template-columns: 110px 1fr auto;
-  gap: 1.5rem;
+  grid-template-columns: 96px 1fr auto;
+  gap: 1.1rem;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.2rem 1.25rem;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
@@ -565,7 +566,7 @@ ul {
 .site-footer {
   background: #faeee6;
   border-top: 1px solid rgba(237, 216, 204, 0.8);
-  padding-top: 3rem;
+  padding-top: 2.2rem;
 }
 
 .footer-grid {
@@ -592,8 +593,8 @@ ul {
 }
 
 .footer-bottom {
-  padding: 1.5rem 0;
-  margin-top: 2rem;
+  padding: 1.1rem 0;
+  margin-top: 1.4rem;
   border-top: 1px solid rgba(237, 216, 204, 0.8);
   text-align: center;
   color: var(--text-soft);
