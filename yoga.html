@@ -1,179 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoga & Meditation | Yoga with Bindu</title>
-  <meta
-    name="description"
-    content="Explore yoga and meditation offerings with Yoga with Bindu, including weekly group classes and private sessions."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga & Meditation — Yoga With Bindu</title>
+  <meta name="description" content="Explore yoga and meditation offerings with Yoga with Bindu, including weekly group classes and private sessions." />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-lockup">
-        <img src="images/logo_bw.PNG" class="logo-img" alt="Yoga with Bindu logo" />
-        <div class="brand-name">Yoga with Bindu</div>
-      </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</button>
+  <nav class="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
+      <span>Yoga With Bindu</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yoga.html" class="active">Yoga</a></li>
+      <li><a href="reiki.html">Reiki</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="classes.html">Classes & Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="yoga.html" class="active">Yoga</a>
-        <a href="reiki.html">Reiki</a>
-        <a href="art.html">Art</a>
-        <a href="classes.html">Classes & Events</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
-      </nav>
+  <section class="page-hero">
+    <div class="section-label">Yoga & Meditation</div>
+    <h1>Gentle, breath-centered practice for ongoing well-being</h1>
+    <p>Supportive sessions combining gentle movement, pranayama, meditation, and relaxation — for all levels.</p>
+    <div class="hero-buttons" style="justify-content:center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register</a>
+      <a href="classes.html" class="btn btn-outline">See Class Announcements</a>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="page-hero compact-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Yoga & Meditation</p>
-          <h1>Gentle, breath-centered practice for ongoing well-being</h1>
-          <p class="hero-description">
-            Yoga with Bindu offers supportive sessions that combine gentle movement,
-            breathing practices, meditation, and relaxation.
-          </p>
-          <div class="hero-buttons">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd0Ss5vwDg-RKWvRBhWhxJ1-kAssNHgLFuKRbBEwoD7ynSl_A/viewform"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              Register
-            </a>
-            <a href="classes.html" class="btn btn-secondary">See Class Announcements</a>
+  <!-- Photo -->
+  <div class="page-photo-strip">
+    <img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" />
+  </div>
+
+  <!-- Offerings -->
+  <section class="offerings-detail">
+    <div class="container-inner">
+      <div class="section-label">Offerings</div>
+      <h2 class="section-title">Ways to Practice With Bindu</h2>
+
+      <div class="offering-rows">
+        <div class="offering-row-card">
+          <div class="offering-row-left">
+            <span class="offering-tag">Weekly Group Class</span>
+            <h3>Yoga, Breathing & Meditation</h3>
+            <p>A gentle weekly class centered on movement, pranayama, and meditation. Open to all levels — modifications always offered.</p>
+          </div>
+          <div class="offering-row-right">
+            <div class="price-block">
+              <p class="price-detail"><strong>Sunday</strong> &nbsp;·&nbsp; 8:15 – 9:15 AM</p>
+              <p class="price-detail">$200 / 12 classes</p>
+              <p class="price-detail">$25 drop-in</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register</a>
           </div>
         </div>
 
-        <div class="image-block service-hero-image">
-          <img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section compact-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Offerings</p>
-          <h2>Ways to practice with Bindu</h2>
-        </div>
-
-        <div class="offering-stack">
-          <article class="offering-row">
-            <div>
-              <p class="offering-tag">Weekly Group Class</p>
-              <h3>Yoga, Breathing & Meditation</h3>
-              <p>
-                A gentle weekly class centered on movement, pranayama, and meditation.
-              </p>
+        <div class="offering-row-card">
+          <div class="offering-row-left">
+            <span class="offering-tag">Private Session</span>
+            <h3>Private Yoga / Meditation</h3>
+            <p>Personalized one-hour sessions designed around your individual needs, goals, and schedule. Great for beginners or those wanting focused attention.</p>
+          </div>
+          <div class="offering-row-right">
+            <div class="price-block">
+              <p class="price-detail">1 hour drop-in: $90</p>
+              <p class="price-detail">5 private classes: $400</p>
+              <p class="price-detail">Schedule by contact</p>
             </div>
-            <div class="offering-side">
-              <p><strong>Sunday</strong></p>
-              <p>8:15 AM – 9:15 AM</p>
-              <p>$200 / 12 classes</p>
-              <p>$25 drop-in</p>
-            </div>
-          </article>
-
-          <article class="offering-row">
-            <div>
-              <p class="offering-tag">Private Session</p>
-              <h3>Private Yoga / Meditation</h3>
-              <p>
-                Personalized one-hour sessions designed around your needs and schedule.
-              </p>
-            </div>
-            <div class="offering-side">
-              <p>1 hour drop-in: $90</p>
-              <p>5 private classes: $400</p>
-              <p>Schedule by contact</p>
-            </div>
-          </article>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Book Now</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section soft-section compact-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What to expect</p>
-          <h2>Supportive and accessible</h2>
-        </div>
-
-        <div class="cards-grid">
-          <article class="info-card">
-            <h3>Gentle Movement</h3>
-            <p>Classes are designed to feel approachable, calming, and easy to follow.</p>
-          </article>
-          <article class="info-card">
-            <h3>Breath & Meditation</h3>
-            <p>Each session includes breathing practices and meditation alongside movement.</p>
-          </article>
-          <article class="info-card">
-            <h3>Simple Registration</h3>
-            <p>Use the registration form to sign up for current yoga offerings.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-banner section">
-      <div class="container cta-banner-inner">
-        <div>
-          <p class="eyebrow">Ready to join?</p>
-          <h2>Use the registration form for the most current yoga options</h2>
-        </div>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Open Registration Form
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Yoga with Bindu</h3>
-        <p>Yoga, meditation, and breath-centered support.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="yoga.html">Yoga</a></li>
-          <li><a href="reiki.html">Reiki</a></li>
-          <li><a href="classes.html">Classes & Events</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Yoga with Bindu. All rights reserved.</p>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="soft-cards-section">
+    <div class="container-inner">
+      <div class="section-label">What to Expect</div>
+      <h2 class="section-title">Supportive and Accessible</h2>
+      <div class="soft-cards">
+        <div class="soft-card">
+          <div class="soft-card-icon">&#127795;</div>
+          <h3>Gentle Movement</h3>
+          <p>Classes are designed to feel approachable, calming, and easy to follow for every body.</p>
+        </div>
+        <div class="soft-card">
+          <div class="soft-card-icon">&#129303;</div>
+          <h3>Breath & Meditation</h3>
+          <p>Each session includes breathing practices and meditation alongside movement.</p>
+        </div>
+        <div class="soft-card">
+          <div class="soft-card-icon">&#10003;</div>
+          <h3>All Levels Welcome</h3>
+          <p>Whether you've never been on a mat or have practiced for years, you belong here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container-inner">
+      <div class="section-label">Kind Words</div>
+      <h2 class="section-title">What Students Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>She explains every pose in detail, allowing you to do each in your own time.</p>
+          <span class="reviewer">— Srividya Ramachandran</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>Yoga is an essential part of my life now, and I look forward to learning more every time I come.</p>
+          <span class="reviewer">— Manpreet Soin</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>After breathing exercises, gentle stretches, and poses, I go home feeling relaxed and energized.</p>
+          <span class="reviewer">— Kathy McKenzie</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Join?</h2>
+    <p style="color:var(--brown-mid); margin-top:0.5rem;">Use the registration form for the most current yoga options.</p>
+    <div style="margin-top:1.5rem;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Open Registration Form</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>Yoga With Bindu</span>
+        <span class="footer-sub">& Dots With Bindu</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="yoga.html">Yoga</a></li>
+        <li><a href="reiki.html">Reiki</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="classes.html">Classes & Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
 

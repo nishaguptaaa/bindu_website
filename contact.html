@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Yoga with Bindu</title>
-  <meta
-    name="description"
-    content="Get in touch with Yoga with Bindu about yoga, Reiki, art, and community offerings."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Yoga With Bindu</title>
+  <meta name="description" content="Get in touch with Yoga with Bindu about yoga, Reiki, art, and community offerings." />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-lockup">
-        <img src="images/logo_bw.PNG" class="logo-img" alt="Yoga with Bindu logo" />
-        <div class="brand-name">Yoga with Bindu</div>
-      </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</button>
+  <nav class="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
+      <span>Yoga With Bindu</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="reiki.html">Reiki</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="classes.html">Classes & Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="yoga.html">Yoga</a>
-        <a href="reiki.html">Reiki</a>
-        <a href="art.html">Art</a>
-        <a href="classes.html">Classes & Events</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active nav-cta">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <section class="page-hero">
+    <div class="section-label">Contact</div>
+    <h1>Let's Connect</h1>
+    <p>Reach out with questions about yoga, Reiki, art, or community offerings. Bindu would love to hear from you.</p>
+  </section>
 
-  <main>
-    <section class="page-hero compact-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h1>Get in touch</h1>
-          <p class="hero-description">
-            Reach out with questions about yoga, Reiki, art, or community offerings.
-          </p>
-        </div>
-
-        <div class="image-block contact-hero-image">
-          <img src="images/bindu.jpeg" alt="Bindu teaching yoga" />
-        </div>
+  <!-- Photo + Contact Details -->
+  <section class="contact-intro-section">
+    <div class="about-intro-inner">
+      <div class="about-intro-image">
+        <img src="images/bindu.jpeg" alt="Bindu teaching yoga" />
       </div>
-    </section>
+      <div class="about-intro-text">
+        <div class="section-label">Get in Touch</div>
+        <h2>Reach Bindu Directly</h2>
+        <p>The best way to book any session — yoga, Reiki, or otherwise — is to fill out the registration form. Bindu will follow up within 1–2 business days to confirm details and scheduling.</p>
+        <p>For questions about art, workshops, collaborations, or general inquiries, email or call directly.</p>
 
-    <section class="section compact-section">
-      <div class="container contact-grid">
-        <div class="info-card contact-card">
-          <h3>Contact details</h3>
-          <p><strong>Phone:</strong> 774-253-5571</p>
-          <p><strong>Email:</strong> yogawithbindu@gmail.com</p>
-          <p>
-            <strong>Instagram:</strong>
-            <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">@doyogawithbindu</a>
-          </p>
-          <p>
-            <strong>Facebook:</strong>
-            <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Dots With Bindu</a>
-          </p>
-        </div>
-
-        <div class="contact-copy">
-          <p class="eyebrow">Registration</p>
-          <h2>Use the Google Form for yoga and Reiki bookings</h2>
-          <p>
-            The registration form includes service selection, waiver language, and response tracking, so it is the easiest way to sign up for current offerings.
-          </p>
-          <p>
-            For questions about art, workshops, collaborations, or general inquiries, email Bindu directly.
-          </p>
-
-          <div class="hero-buttons">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              Open Registration Form
-            </a>
-            <a href="mailto:yogawithbindu@gmail.com" class="btn btn-secondary">
-              Email Bindu
-            </a>
+        <div class="contact-details-grid">
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:7742535571">774-253-5571</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">@doyogawithbindu</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">👍</span>
+            <div>
+              <strong>Facebook</strong>
+              <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Dots With Bindu</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Yoga with Bindu</h3>
-        <p>Yoga, Reiki, art, and community-centered offerings.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="yoga.html">Yoga</a></li>
-          <li><a href="reiki.html">Reiki</a></li>
-          <li><a href="art.html">Art</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a></li>
-          <li><a href="mailto:yogawithbindu@gmail.com">Email</a></li>
-        </ul>
+  <!-- Registration Form CTA -->
+  <section class="form-cta-section">
+    <div class="container-inner">
+      <div class="form-cta-card">
+        <div class="form-cta-text">
+          <div class="section-label">Registration</div>
+          <h2>Book a Yoga or Reiki Session</h2>
+          <p>The registration form includes service selection, waiver language, and response tracking — it's the easiest way to sign up for current offerings.</p>
+          <div class="hero-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Open Registration Form ↗</a>
+            <a href="mailto:yogawithbindu@gmail.com" class="btn btn-outline">Email Bindu</a>
+          </div>
+        </div>
+        <div class="form-cta-note">
+          <p>&#128338;</p>
+          <p><strong>Response Time</strong></p>
+          <p>Bindu typically responds within 1–2 business days. For urgent inquiries, phone or email is best.</p>
+        </div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Yoga with Bindu. All rights reserved.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>Yoga With Bindu</span>
+        <span class="footer-sub">& Dots With Bindu</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="yoga.html">Yoga</a></li>
+        <li><a href="reiki.html">Reiki</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="classes.html">Classes & Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
 

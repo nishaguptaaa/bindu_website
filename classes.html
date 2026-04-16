@@ -1,220 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Classes & Events | Yoga with Bindu</title>
-  <meta
-    name="description"
-    content="View library classes, community events, and announcements from Yoga with Bindu."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classes & Events — Yoga With Bindu</title>
+  <meta name="description" content="View library classes, community events, and announcements from Yoga with Bindu." />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-lockup">
-        <img src="images/logo_bw.PNG" class="logo-img" alt="Yoga with Bindu logo" />
-        <div class="brand-name">Yoga with Bindu</div>
-      </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</button>
+  <nav class="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
+      <span>Yoga With Bindu</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="reiki.html">Reiki</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="classes.html" class="active">Classes & Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="yoga.html">Yoga</a>
-        <a href="reiki.html">Reiki</a>
-        <a href="art.html">Art</a>
-        <a href="classes.html" class="active">Classes & Events</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <section class="page-hero">
+    <div class="section-label">Classes & Events</div>
+    <h1>Library classes, community offerings, and announcements</h1>
+    <p>This page is kept up-to-date with all public class announcements and upcoming community events.</p>
+  </section>
 
-  <main>
-    <section class="page-hero compact-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Classes & Events</p>
-          <h1>Library classes, community offerings, and announcements</h1>
-          <p class="hero-description">
-            This page is for public class announcements and community offerings.
-          </p>
-        </div>
+  <!-- Upcoming Events -->
+  <section class="events-section">
+    <div class="container-inner">
+      <div class="section-label">Announcements</div>
+      <h2 class="section-title">Upcoming Classes & Events</h2>
 
-        <div class="info-card centered-info-card">
-        <h3>Use this page for</h3>
-        <p>Library classes</p>
-        <p>Community workshops</p>
-        <p>Seasonal announcements</p>
-        <p>Public registration links</p>
-        </div>
-      </div>
-    </section>
+      <!--
+        =====================================================
+        HOW TO UPDATE EVENTS (no coding needed!):
+        Each event card below has:
+          - A date box: change the day abbreviation and number/time
+          - A title (h3)
+          - A date/time line (.event-meta)
+          - A description paragraph
+          - A button (update the href link if needed)
 
-    <section class="section compact-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Announcements</p>
-          <h2>Upcoming classes and announcements</h2>
-        </div>
+        To ADD a new event: copy one <article class="event-card"> block and paste it.
+        To REMOVE an event: delete the entire <article class="event-card"> block.
+        =====================================================
+      -->
+      <div class="event-list">
 
-        <div class="event-list">
-          <article class="event-card">
-            <div class="event-date-box">
-              <span class="event-month">SUN</span>
-              <span class="event-day">8:15</span>
-            </div>
-            <div class="event-content">
-              <h3>Weekly Group Yoga & Meditation</h3>
-              <p class="event-meta">Sunday • 8:15 AM – 9:15 AM</p>
-              <p>
-                Gentle weekly practice centered on yoga, breathing, and meditation.
-              </p>
-            </div>
-            <div class="event-action">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform"
-                target="_blank"
-                class="btn btn-primary"
-              >
-                Register
-              </a>
-            </div>
-          </article>
+        <article class="event-card">
+          <div class="event-date-box">
+            <span class="event-day-label">SUN</span>
+            <span class="event-time">8:15</span>
+          </div>
+          <div class="event-content">
+            <h3>Weekly Group Yoga & Meditation</h3>
+            <p class="event-meta">Every Sunday &nbsp;·&nbsp; 8:15 AM – 9:15 AM</p>
+            <p>Gentle weekly practice centered on yoga, breathing, and meditation. All levels welcome — modifications always offered. $200 for 12 classes or $25 drop-in.</p>
+          </div>
+          <div class="event-action">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register</a>
+          </div>
+        </article>
 
-          <article class="event-card">
-            <div class="event-date-box">
-              <span class="event-month">LIB</span>
-              <span class="event-day">NEW</span>
-            </div>
-            <div class="event-content">
-              <h3>Library Class Placeholder</h3>
-              <p class="event-meta">Add date, time, and library name here</p>
-              <p>
-                Use this section for upcoming public library offerings.
-              </p>
-            </div>
-            <div class="event-action">
-              <a href="#" class="btn btn-secondary">Add Link</a>
-            </div>
-          </article>
+        <!-- LIBRARY CLASS PLACEHOLDER — update when Bindu has a library class -->
+        <article class="event-card">
+          <div class="event-date-box">
+            <span class="event-day-label">LIB</span>
+            <span class="event-time">NEW</span>
+          </div>
+          <div class="event-content">
+            <h3>Library Class — Coming Soon</h3>
+            <p class="event-meta">Date & library TBA — check back soon!</p>
+            <p>Bindu regularly teaches at local libraries. Update this card with the next library class date, time, and location when it's confirmed.</p>
+          </div>
+          <div class="event-action">
+            <a href="contact.html" class="btn btn-outline">Ask Bindu</a>
+          </div>
+        </article>
 
-          <article class="event-card">
-            <div class="event-date-box">
-              <span class="event-month">ART</span>
-              <span class="event-day">SOON</span>
-            </div>
-            <div class="event-content">
-              <h3>Workshop Announcement Placeholder</h3>
-              <p class="event-meta">Add future community or art workshop info here</p>
-              <p>
-                Use this section for public-facing announcements only.
-              </p>
-            </div>
-            <div class="event-action">
-              <a href="#" class="btn btn-secondary">Add Link</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        <!-- WORKSHOP PLACEHOLDER -->
+        <article class="event-card">
+          <div class="event-date-box">
+            <span class="event-day-label">ART</span>
+            <span class="event-time">SOON</span>
+          </div>
+          <div class="event-content">
+            <h3>Workshop Announcement — Coming Soon</h3>
+            <p class="event-meta">Add future community or art workshop info here</p>
+            <p>Use this card for public workshop and community event announcements. Update with title, date, time, and location as events are confirmed.</p>
+          </div>
+          <div class="event-action">
+            <a href="contact.html" class="btn btn-outline">Contact Bindu</a>
+          </div>
+        </article>
 
-    <section class="section compact-section" id="class-gallery">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Community moments</p>
-      <h2>Classes and workshops</h2>
-    </div>
-
-    <div class="art-carousel class-carousel">
-      <div class="art-track">
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" />
-        </div>
-
-        <!-- duplicate for seamless loop -->
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" />
-        </div>
-        <div class="art-slide">
-          <img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" />
-        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <section class="cta-banner section">
-      <div class="container cta-banner-inner">
-        <div>
-          <p class="eyebrow">Need private support?</p>
-          <h2>Visit the Yoga or Reiki pages for private offerings</h2>
+  <!-- Google Calendar -->
+  <section class="calendar-section">
+    <div class="container-inner">
+      <div class="section-label">Live Schedule</div>
+      <h2>Full Calendar</h2>
+      <p>This calendar is updated directly by Bindu — so you'll always see the latest schedule here.</p>
+
+      <!--
+        =====================================================
+        HOW TO EMBED YOUR GOOGLE CALENDAR:
+        1. Go to Google Calendar
+        2. Click the three dots (...) next to the calendar name
+        3. Select "Settings and sharing"
+        4. Scroll to "Integrate calendar"
+        5. Copy the Embed code (an <iframe> tag)
+        6. Replace the placeholder iframe below with your copied iframe
+        7. Set width="100%" and height="500" in the iframe tag
+        =====================================================
+      -->
+      <div class="calendar-embed">
+        <div class="calendar-placeholder">
+          <p>&#128197;</p>
+          <p>Add your Google Calendar embed URL here.</p>
+          <p style="font-size:0.85rem; opacity:0.6;">See the code comment above for step-by-step instructions.</p>
         </div>
-        <a href="yoga.html" class="btn btn-primary">Go to Yoga</a>
+        <!-- REPLACE THE DIV ABOVE WITH YOUR GOOGLE CALENDAR IFRAME:
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York"
+          style="border:0; width:100%; height:500px;"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+        -->
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Community Photo Carousel -->
+  <section class="auto-scroll-section">
+    <div class="container-inner">
+      <div class="section-label">Community Moments</div>
+      <h2 class="section-title">Classes & Workshops</h2>
+    </div>
+    <div class="auto-scroll-carousel">
+      <div class="auto-scroll-track" id="autoScrollTrack">
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" /></div>
+        <!-- duplicated for seamless loop -->
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Need Private Support?</h2>
+    <p style="color:var(--brown-mid); margin-top:0.5rem;">Visit the Yoga or Reiki pages for individual session options.</p>
+    <div class="hero-buttons" style="justify-content:center; margin-top:1.5rem;">
+      <a href="yoga.html" class="btn btn-primary">Go to Yoga</a>
+      <a href="reiki.html" class="btn btn-outline">Go to Reiki</a>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Yoga with Bindu</h3>
-        <p>Public classes, community events, and announcements.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>Yoga With Bindu</span>
+        <span class="footer-sub">& Dots With Bindu</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        </div>
       </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="yoga.html">Yoga</a></li>
-          <li><a href="reiki.html">Reiki</a></li>
-          <li><a href="art.html">Art</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Yoga with Bindu. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="yoga.html">Yoga</a></li>
+        <li><a href="reiki.html">Reiki</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="classes.html">Classes & Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
 
