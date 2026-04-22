@@ -1,7 +1,7 @@
 /* ============================
    YOGA WITH BINDU — style.css v2
    ============================ */
-
+ 
 :root {
   --peach-lightest: #fff7f2;
   --peach-light:    #fde8d8;
@@ -17,10 +17,10 @@
   --brown-mid:      #7a4d2d;
   --brown-light:    #b07a55;
   --off-black:      #2c1a0e;
-
+ 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Jost', sans-serif;
-
+ 
   --transition: 0.3s ease;
   --shadow:    0 4px 24px rgba(74,46,26,0.10);
   --shadow-lg: 0 12px 48px rgba(74,46,26,0.16);
@@ -28,7 +28,7 @@
   --radius-sm: 8px;
   --max-w:     1080px;
 }
-
+ 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -46,13 +46,13 @@ h1,h2,h3,h4 {
   font-weight: 400;
   line-height: 1.2;
 }
-
+ 
 .container-inner {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 2rem;
 }
-
+ 
 /* ============================
    NAVBAR
    ============================ */
@@ -70,7 +70,7 @@ h1,h2,h3,h4 {
   transition: box-shadow var(--transition);
 }
 .navbar.scrolled { box-shadow: var(--shadow); }
-
+ 
 .nav-logo {
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@ h1,h2,h3,h4 {
   height: 36px;
   width: auto;
 }
-
+ 
 .nav-links {
   list-style: none;
   display: flex;
@@ -114,7 +114,7 @@ h1,h2,h3,h4 {
   cursor: pointer;
   color: var(--terracotta);
 }
-
+ 
 /* ============================
    HERO
    ============================ */
@@ -241,7 +241,7 @@ h1,h2,h3,h4 {
   0%,100% { transform: translateX(-50%) translateY(0); }
   50%      { transform: translateX(-50%) translateY(8px); }
 }
-
+ 
 /* ============================
    BUTTONS
    ============================ */
@@ -281,7 +281,7 @@ h1,h2,h3,h4 {
   gap: 0.8rem;
   flex-wrap: wrap;
 }
-
+ 
 /* ============================
    SECTION UTILITIES
    ============================ */
@@ -302,7 +302,7 @@ h1,h2,h3,h4 {
   text-align: center;
   margin-top: 2.5rem;
 }
-
+ 
 /* ============================
    OFFERINGS (home)
    ============================ */
@@ -336,7 +336,7 @@ h1,h2,h3,h4 {
 .offering-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .offering-card p { font-size: 0.92rem; color: var(--brown-mid); margin-bottom: 1rem; }
 .card-link { color: var(--terracotta); font-size: 0.83rem; font-weight: 500; }
-
+ 
 /* ============================
    PULL QUOTE
    ============================ */
@@ -355,7 +355,7 @@ h1,h2,h3,h4 {
   margin: 0 auto;
   line-height: 1.4;
 }
-
+ 
 /* ============================
    ABOUT TEASER (home)
    ============================ */
@@ -387,7 +387,7 @@ h1,h2,h3,h4 {
 }
 .about-teaser-text p { color: var(--brown-mid); margin-bottom: 1rem; }
 .about-teaser-text .btn { margin-top: 0.5rem; }
-
+ 
 /* ============================
    TESTIMONIALS
    ============================ */
@@ -427,7 +427,7 @@ h1,h2,h3,h4 {
   color: var(--terracotta);
   font-style: normal;
 }
-
+ 
 /* ============================
    CTA SECTION
    ============================ */
@@ -438,7 +438,7 @@ h1,h2,h3,h4 {
   text-align: center;
 }
 .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-
+ 
 /* ============================
    PAGE HERO (inner pages)
    ============================ */
@@ -475,7 +475,7 @@ h1,h2,h3,h4 {
   max-width: 560px;
   margin: 0 auto 1.8rem;
 }
-
+ 
 /* ============================
    PAGE PHOTO STRIP
    ============================ */
@@ -492,7 +492,7 @@ h1,h2,h3,h4 {
 .art-hero-strip {
   height: 500px;
 }
-
+ 
 /* ============================
    OFFERINGS DETAIL (yoga/reiki)
    ============================ */
@@ -545,7 +545,7 @@ h1,h2,h3,h4 {
   font-size: 0.87rem;
   color: var(--brown-mid);
 }
-
+ 
 /* ============================
    SOFT CARDS (what to expect)
    ============================ */
@@ -576,7 +576,7 @@ h1,h2,h3,h4 {
 }
 .soft-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .soft-card p { font-size: 0.9rem; color: var(--brown-mid); }
-
+ 
 /* ============================
    CONTENT SECTION (split text)
    ============================ */
@@ -593,7 +593,7 @@ h1,h2,h3,h4 {
 }
 .split-text h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
 .split-text p { color: var(--brown-mid); font-size: 0.95rem; margin-bottom: 1rem; }
-
+ 
 /* ============================
    ART GALLERY
    ============================ */
@@ -601,7 +601,7 @@ h1,h2,h3,h4 {
   padding: 6rem 2rem;
   background: var(--warm-white);
 }
-
+ 
 .gallery-container {
   position: relative;
   background: var(--off-black);
@@ -660,7 +660,7 @@ h1,h2,h3,h4 {
   border: none;
 }
 .gallery-dot.active { background: #fff; }
-
+ 
 .gallery-thumbnails {
   display: flex;
   gap: 0.6rem;
@@ -681,7 +681,7 @@ h1,h2,h3,h4 {
 }
 .gallery-thumb.active { border-color: var(--terracotta); }
 .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
-
+ 
 /* ============================
    EVENTS (classes page)
    ============================ */
@@ -734,7 +734,53 @@ h1,h2,h3,h4 {
 .event-meta { font-size: 0.83rem; color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
 .event-content p { font-size: 0.92rem; color: var(--brown-mid); }
 .event-action { flex-shrink: 0; }
-
+ 
+/* ============================
+   WORKSHOPS SECTION
+   ============================ */
+.workshops-section {
+  padding: 6rem 2rem;
+  background: var(--cream);
+}
+.workshops-intro {
+  color: var(--brown-mid);
+  font-size: 1rem;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+.linktree-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--warm-white);
+  border: 1.5px solid var(--peach);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+}
+.linktree-banner-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex: 1;
+  min-width: 240px;
+}
+.linktree-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.linktree-banner-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.linktree-banner-left p {
+  color: var(--brown-mid);
+  font-size: 0.92rem;
+}
+.workshop-details { margin-top: 1rem; }
+ 
 /* ============================
    CALENDAR SECTION
    ============================ */
@@ -757,7 +803,7 @@ h1,h2,h3,h4 {
   font-style: italic;
 }
 .calendar-placeholder p:first-child { font-size: 2.5rem; margin-bottom: 0.8rem; }
-
+ 
 /* ============================
    AUTO-SCROLL CAROUSEL (classes)
    ============================ */
@@ -799,7 +845,7 @@ h1,h2,h3,h4 {
   transition: transform 0.4s ease;
 }
 .auto-scroll-slide:hover img { transform: scale(1.04); }
-
+ 
 /* ============================
    ABOUT INTRO (about & contact)
    ============================ */
@@ -830,7 +876,7 @@ h1,h2,h3,h4 {
 }
 .about-intro-text h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 1rem; }
 .about-intro-text p { color: var(--brown-mid); margin-bottom: 1rem; font-size: 0.95rem; }
-
+ 
 /* Credentials grid */
 .credentials-grid {
   display: grid;
@@ -848,7 +894,7 @@ h1,h2,h3,h4 {
 .cred-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
 .credential-item h4 { font-size: 1rem; margin-bottom: 0.2rem; }
 .credential-item p { font-size: 0.82rem; color: var(--brown-mid); margin: 0; }
-
+ 
 /* ============================
    CONTACT DETAILS
    ============================ */
@@ -871,7 +917,7 @@ h1,h2,h3,h4 {
 .contact-detail-item strong { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.2rem; }
 .contact-detail-item a { color: var(--brown-mid); font-size: 0.9rem; transition: color var(--transition); }
 .contact-detail-item a:hover { color: var(--terracotta); }
-
+ 
 /* Form CTA section */
 .form-cta-section {
   padding: 6rem 2rem;
@@ -901,7 +947,7 @@ h1,h2,h3,h4 {
 .form-cta-note p:first-child { font-size: 2rem; margin-bottom: 0.5rem; }
 .form-cta-note p { font-size: 0.85rem; color: var(--brown-mid); }
 .form-cta-note strong { color: var(--brown-text); display: block; margin-bottom: 0.3rem; font-size: 0.9rem; }
-
+ 
 /* ============================
    FOOTER
    ============================ */
@@ -962,7 +1008,7 @@ h1,h2,h3,h4 {
   text-align: right;
   align-self: end;
 }
-
+ 
 /* ============================
    ANIMATIONS
    ============================ */
@@ -973,7 +1019,7 @@ h1,h2,h3,h4 {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
+ 
 /* ============================
    RESPONSIVE
    ============================ */
@@ -993,7 +1039,7 @@ h1,h2,h3,h4 {
   }
   .nav-links.open { display: flex; }
   .hamburger { display: block; }
-
+ 
   .about-teaser-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-teaser-image { position: static; }
   .about-intro-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1014,7 +1060,7 @@ h1,h2,h3,h4 {
   .contact-details-grid { grid-template-columns: 1fr; }
   .credentials-grid { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 @media (max-width: 600px) {
   .hero-content h1 { font-size: 2.8rem; }
   .page-hero { padding: 8rem 1.5rem 4rem; }
@@ -1027,3 +1073,4 @@ h1,h2,h3,h4 {
   .gallery-slide { aspect-ratio: 1; }
   .credentials-grid { grid-template-columns: 1fr; }
 }
+ 
