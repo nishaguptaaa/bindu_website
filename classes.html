@@ -1,186 +1,183 @@
-Classes · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Classes & Events — Yoga With Bindu</title>
-  <meta name="description" content="View library classes, community events, and announcements from Yoga with Bindu." />
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
- 
-  <nav class="navbar">
+
+  <nav class="navbar scrolled" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
-      <span>Yoga With Bindu</span>
+      <span class="nav-logo-text">Yoga With Bindu</span>
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="yoga.html">Yoga</a></li>
       <li><a href="reiki.html">Reiki</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="classes.html" class="active">Classes & Events</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About & Contact</a></li>
     </ul>
   </nav>
- 
+
   <section class="page-hero">
-    <div class="section-label">Classes & Events</div>
-    <h1>Yoga, Reiki & Dot Mandala Workshops</h1>
-    <p>Weekly group classes, private sessions, and community workshops at local libraries and beyond.</p>
+    <div class="page-hero-bg" style="background-image:url('images/backgrounds/yogarose.jpeg'); background-size:cover; background-position:center 20%;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow">Classes & Events</p>
+      <h1>Community practice,<br/><em>open to all</em></h1>
+    </div>
   </section>
- 
-  <!-- ============================
-       SECTION 1: REGULAR CLASSES
-       ============================ -->
+
+  <!-- REGULAR CLASSES -->
   <section class="events-section">
     <div class="container-inner">
-      <div class="section-label">Ongoing</div>
-      <h2 class="section-title">Regular Classes</h2>
- 
-      <div class="event-list">
- 
-        <article class="event-card">
-          <div class="event-date-box">
-            <span class="event-day-label">SUN</span>
-            <span class="event-time">8:15</span>
-          </div>
-          <div class="event-content">
-            <h3>Weekly Group Yoga & Meditation</h3>
-            <p class="event-meta">Every Sunday &nbsp;·&nbsp; 8:15 AM – 9:15 AM</p>
-            <p>Gentle weekly practice centered on yoga, breathing, and meditation. All levels welcome — modifications always offered. $200 for 10 classes or $25 drop-in.</p>
-          </div>
-          <div class="event-action">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register</a>
-          </div>
-        </article>
- 
-        <article class="event-card">
-          <div class="event-date-box">
-            <span class="event-day-label">PRIV</span>
-            <span class="event-time">1:1</span>
-          </div>
-          <div class="event-content">
-            <h3>Private Yoga & Reiki Sessions</h3>
-            <p class="event-meta">By appointment &nbsp;·&nbsp; Flexible scheduling</p>
-            <p>One-on-one yoga, meditation, or Reiki sessions tailored to your needs. Visit the Yoga or Reiki pages for pricing and details.</p>
-          </div>
-          <div class="event-action">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Book Now</a>
-          </div>
-        </article>
- 
+      <div class="section-title-block reveal-up">
+        <p class="eyebrow">Ongoing</p>
+        <h2>Regular Classes</h2>
+      </div>
+
+      <!--
+        HOW TO UPDATE EVENTS:
+        Each .event-row is one class listing.
+        Edit the text directly — day number, label, title, meta line, and description.
+        To add a class: copy one event-row block and paste it.
+        To remove a class: delete the entire event-row block.
+      -->
+
+      <div class="event-row reveal-up">
+        <div class="event-date">
+          <p class="event-date-day">8:15</p>
+          <p class="event-date-label">Sunday AM</p>
+        </div>
+        <div class="event-info">
+          <p class="event-meta">Every Sunday &middot; 8:15 &ndash; 9:15 AM</p>
+          <h3>Weekly Group Yoga & Meditation</h3>
+          <p>Gentle weekly practice centered on yoga, breathing, and meditation. All levels welcome — modifications always offered. $200 for 12 classes or $25 drop-in.</p>
+        </div>
+        <div>
+          <a href="register.html" target="_blank" class="btn-elegant-outline">Register</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal-up">
+        <div class="event-date">
+          <p class="event-date-day">1:1</p>
+          <p class="event-date-label">By Appt.</p>
+        </div>
+        <div class="event-info">
+          <p class="event-meta">Flexible scheduling &middot; Yoga or Reiki</p>
+          <h3>Private Sessions</h3>
+          <p>One-on-one yoga, meditation, or Reiki sessions tailored entirely to your needs. Visit the Yoga or Reiki pages for full pricing and details.</p>
+        </div>
+        <div>
+          <a href="register.html" target="_blank" class="btn-elegant-outline">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORKSHOPS / LINKTREE -->
+  <section class="linktree-section">
+    <div class="linktree-inner">
+      <div class="section-title-block reveal-up">
+        <p class="eyebrow">Workshops & Community</p>
+        <h2>Dot Mandala Workshops<br/>& Library Classes</h2>
+      </div>
+      <p class="reveal-up" style="font-family: var(--font-serif); font-size: 1.05rem; color: var(--brown-warm); line-height: 1.9; max-width: 640px; margin-bottom: 3rem;">Bindu teaches dot mandala workshops and yoga classes at local libraries and community spaces throughout the year. All upcoming dates, registration links, and details are kept up-to-date on her Linktree — she updates it directly whenever new events are confirmed.</p>
+
+      <div class="linktree-card reveal-up">
+        <div>
+          <h3>See All Upcoming Events</h3>
+          <p>Dot mandala workshops, library yoga classes, and community offerings — all in one place.</p>
+        </div>
+        <a href="https://linktr.ee/YogaWithBindu" target="_blank" class="btn-elegant">View Full Schedule</a>
       </div>
     </div>
   </section>
- 
-  <!-- ============================
-       SECTION 2: WORKSHOPS & LIBRARY CLASSES
-       ============================ -->
-  <section class="workshops-section">
-    <div class="container-inner">
-      <div class="section-label">Workshops & Community</div>
-      <h2 class="section-title">Dot Mandala Workshops & Library Classes</h2>
-      <p class="workshops-intro">Bindu teaches dot mandala workshops and yoga classes at local libraries and community spaces throughout the year. All upcoming dates, registration links, and details are kept up-to-date on her Linktree.</p>
- 
-      <div class="linktree-banner">
-        <div class="linktree-banner-left">
-          <div class="linktree-icon">&#127812;</div>
-          <div>
-            <h3>See All Upcoming Events</h3>
-            <p>Dot mandala workshops, library yoga classes, and community offerings: all in one place. Bindu updates this directly whenever new dates are added.</p>
-          </div>
-        </div>
-        <a href="https://linktr.ee/YogaWithBindu" target="_blank" class="btn btn-primary">View Full Schedule ↗</a>
+
+  <!-- WHAT TO EXPECT AT A WORKSHOP -->
+  <section class="steps-section">
+    <div class="steps-grid-wrap" style="max-width: var(--max-w); margin: 0 auto; padding: 0 2rem;">
+      <div class="section-title-block reveal-up">
+        <p class="eyebrow">Dot Mandala Workshops</p>
+        <h2>What to Expect</h2>
       </div>
- 
-      <!-- What to expect at a workshop -->
-      <div class="workshop-details">
-        <div class="section-label" style="margin-top: 3.5rem;">Dot Mandala Workshops</div>
-        <h2 class="section-title" style="margin-bottom: 1.5rem;">What to Expect</h2>
-        <div class="soft-cards" style="margin: 0;">
-          <div class="soft-card">
-            <div class="soft-card-icon">&#127912;</div>
-            <h3>All Skill Levels</h3>
-            <p>No art experience needed. Bindu guides you through every step; beginners and experienced artists are equally welcome.</p>
-          </div>
-          <div class="soft-card">
-            <div class="soft-card-icon">&#128205;</div>
-            <h3>Local Libraries & More</h3>
-            <p>Classes are held at local libraries and community spaces, making them accessible and welcoming for everyone.</p>
-          </div>
-          <div class="soft-card">
-            <div class="soft-card-icon">&#128149;</div>
-            <h3>Meditative & Fun</h3>
-            <p>Dot mandala art is a meditative practice that's also joyful and social, making it a perfect way to slow down and create something beautiful.</p>
-          </div>
+      <div class="steps-grid" style="padding: 0; margin: 0;">
+        <div class="step reveal-up">
+          <p class="step-num">01</p>
+          <h3>All Skill Levels</h3>
+          <p>No art experience needed. Bindu guides you through every step — beginners and experienced artists are equally welcome.</p>
+        </div>
+        <div class="step reveal-up delay-1">
+          <p class="step-num">02</p>
+          <h3>Local Libraries & Community Spaces</h3>
+          <p>Classes are held at accessible locations throughout the area, making them easy and welcoming for everyone.</p>
+        </div>
+        <div class="step reveal-up delay-2">
+          <p class="step-num">03</p>
+          <h3>Meditative & Joyful</h3>
+          <p>Dot mandala art is a meditative practice that is also deeply social and fun — a perfect way to slow down and create something beautiful.</p>
         </div>
       </div>
     </div>
   </section>
- 
-  <!-- Community photo strip -->
+
+  <!-- COMMUNITY PHOTO STRIP -->
   <section class="auto-scroll-section">
-    <div class="container-inner" style="text-align:center; margin-bottom:2rem;">
-      <div class="section-label">Community Moments</div>
-      <h2 class="section-title" style="margin-bottom:0;">Classes & Workshops</h2>
+    <div class="auto-scroll-header">
+      <p class="eyebrow">Community Moments</p>
+      <h2>Classes & Workshops</h2>
     </div>
-    <div class="auto-scroll-carousel">
+    <div class="auto-scroll-track-wrap">
       <div class="auto-scroll-track">
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" /></div>
-        <!-- duplicated for seamless loop -->
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Yoga class with Bindu" /></div>
-        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Yoga class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6306.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6307.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6312.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6313.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6314.jpeg" alt="Class with Bindu" /></div>
+        <div class="auto-scroll-slide"><img src="images/liveaction/IMG_6315.jpeg" alt="Class with Bindu" /></div>
       </div>
     </div>
   </section>
- 
-  <section class="cta-section">
-    <h2>Need Private Support?</h2>
-    <p style="color:var(--brown-mid); margin-top:0.5rem;">Visit the Yoga or Reiki pages for individual session options and pricing.</p>
-    <div class="hero-buttons" style="justify-content:center; margin-top:1.5rem;">
-      <a href="yoga.html" class="btn btn-primary">Go to Yoga</a>
-      <a href="reiki.html" class="btn btn-outline">Go to Reiki</a>
-    </div>
-  </section>
- 
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span>Yoga With Bindu</span>
-        <span class="footer-sub">& Dots With Bindu</span>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
-        </div>
+        
+        <p>Yoga With Bindu<br/><span>& Dots With Bindu</span></p>
       </div>
-      <ul class="footer-links">
-        <li><a href="yoga.html">Yoga</a></li>
-        <li><a href="reiki.html">Reiki</a></li>
-        <li><a href="art.html">Art</a></li>
-        <li><a href="classes.html">Classes & Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="reiki.html">Reiki</a>
+        <a href="art.html">Art</a>
+        <a href="classes.html">Classes & Events</a>
+        <a href="about.html">About & Contact</a>
+      </nav>
+      <div class="footer-connect">
+        <p class="eyebrow">Connect</p>
+        <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+        <a href="tel:7742535571">774-253-5571</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
- 
+
   <script src="script.js"></script>
 </body>
 </html>

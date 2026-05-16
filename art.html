@@ -3,123 +3,123 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art — Dots With Bindu</title>
-  <meta name="description" content="Explore Dots With Bindu artwork and creative workshops." />
+  <title>Dots With Bindu — Art</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar scrolled" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
-      <span>Yoga With Bindu</span>
+      <span class="nav-logo-text">Yoga With Bindu</span>
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="yoga.html">Yoga</a></li>
       <li><a href="reiki.html">Reiki</a></li>
       <li><a href="art.html" class="active">Art</a></li>
       <li><a href="classes.html">Classes & Events</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About & Contact</a></li>
     </ul>
   </nav>
 
   <section class="page-hero">
-    <div class="section-label">Dots With Bindu</div>
-    <h1>Creative work rooted in joy, patience, and expression</h1>
-    <p>A welcoming space to explore artwork, creative workshops, and future offerings from Dots With Bindu.</p>
-    <div class="hero-buttons" style="justify-content:center;">
-      <a href="#gallery" class="btn btn-primary">View Artwork</a>
-      <a href="contact.html" class="btn btn-outline">Ask About Art</a>
+    <div class="page-hero-bg" style="background-image:url('images/backgrounds/mandala.jpg'); background-size:cover; background-position:center;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow">Dots With Bindu</p>
+      <h1>Art born from<br/><em>stillness</em></h1>
     </div>
   </section>
 
-  <!-- Featured hero image -->
-  <div class="page-photo-strip art-hero-strip">
-    <img src="images/art/IMG_2462.jpeg" alt="Featured artwork by Bindu" />
-  </div>
-
-  <!-- Gallery -->
-  <section class="art-gallery-section" id="gallery">
-    <div class="container-inner">
-      <div class="section-label">Gallery</div>
-      <h2 class="section-title">Featured Pieces</h2>
-
-      <!-- Main slider -->
-      <div class="gallery-container">
-        <div class="gallery-track">
-          <div class="gallery-slide"><img src="images/art/IMG_2462.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6178.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6192.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6260.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6266.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6525.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_8098.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_9969.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_8168.jpeg" alt="Artwork by Bindu" /></div>
-          <div class="gallery-slide"><img src="images/art/IMG_6591.jpeg" alt="Artwork by Bindu" /></div>
+  <!-- INTRO -->
+  <section class="page-content">
+    <div class="page-content-inner">
+      <div class="reveal-up">
+        <p class="eyebrow">The Practice</p>
+        <h2>One dot at a time</h2>
+        <p>Dots With Bindu is a meditative art practice rooted in the same principles that guide Bindu's yoga and Reiki work — presence, patience, and intention. Each piece is created one dot at a time, one breath at a time.</p>
+        <p>The work draws from sacred geometry, the natural world, and the quiet space between thoughts. Whether intimate or large-scale, each piece carries the energy of the moment it was made.</p>
+      </div>
+      <div class="content-divider"></div>
+      <div class="reveal-up">
+        <p class="eyebrow">Commissions & Workshops</p>
+        <h2>Bring a piece home</h2>
+        <p>Original pieces and custom commissions are available. Bindu also leads dot mandala workshops at local libraries and community spaces — a joyful, meditative experience for all skill levels. See the Classes & Events page for upcoming workshop dates, or reach out to inquire about a commission.</p>
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="classes.html" class="btn-elegant-outline">See Workshops</a>
+          <a href="about.html#contact" class="btn-elegant-outline">Inquire About a Commission</a>
         </div>
-        <button class="gallery-btn prev" aria-label="Previous">&#8592;</button>
-        <button class="gallery-btn next" aria-label="Next">&#8594;</button>
-        <div class="gallery-dots" id="galleryDots"></div>
-      </div>
-
-      <!-- Thumbnail strip -->
-      <div class="gallery-thumbnails" id="galleryThumbs">
-        <div class="gallery-thumb active"><img src="images/art/IMG_2462.jpeg" alt="Thumb 1" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6178.jpeg" alt="Thumb 2" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6192.jpeg" alt="Thumb 3" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6260.jpeg" alt="Thumb 4" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6266.jpeg" alt="Thumb 5" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6525.jpeg" alt="Thumb 6" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_8098.jpeg" alt="Thumb 7" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_9969.jpeg" alt="Thumb 8" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_8168.jpeg" alt="Thumb 9" /></div>
-        <div class="gallery-thumb"><img src="images/art/IMG_6591.jpeg" alt="Thumb 10" /></div>
       </div>
     </div>
   </section>
 
-  <!-- Art Info -->
-  <section class="content-section">
-    <div class="container-inner split-text">
-      <div>
-        <div class="section-label">About the Work</div>
-        <h2>The Art of the Dot</h2>
-        <p>Dots With Bindu is a meditative art practice — each piece created one dot at a time. The process itself is a form of meditation, requiring presence and patience in equal measure.</p>
-        <p>Bindu's work is inspired by nature, sacred geometry, and the quiet moments between breaths. Her pieces range from intimate originals to larger commissions.</p>
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="gallery-section-inner">
+      <div class="section-title-block reveal-up">
+        <p class="eyebrow">Gallery</p>
+        <h2 style="color:#fff;">Featured Works</h2>
       </div>
-      <div>
-        <div class="section-label">Commission & Contact</div>
-        <h2>Bring a Piece Home</h2>
-        <p>Original pieces and custom commissions are available. Whether you're looking for something for your home, a meaningful gift, or a bespoke creation, Bindu loves bringing these pieces to life for others.</p>
-        <a href="contact.html" class="btn btn-primary" style="margin-top:0.8rem; display:inline-block;">Inquire About a Commission</a>
+
+      <div class="gallery-container reveal-up">
+        <div class="gallery-track" id="galleryTrack">
+          <div class="gallery-slide"><img src="images/art/IMG_2462.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6178.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6192.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6260.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6266.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6525.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_8098.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_9969.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_8168.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+          <div class="gallery-slide"><img src="images/art/IMG_6591.jpeg" alt="Artwork by Bindu" draggable="false"/></div>
+        </div>
+
+        <div class="gallery-controls">
+          <div class="gallery-arrows">
+            <button class="gallery-arrow prev" aria-label="Previous">&#8592;</button>
+            <button class="gallery-arrow next" aria-label="Next">&#8594;</button>
+          </div>
+          <span class="gallery-counter">01 / 10</span>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <p class="eyebrow">Dots With Bindu</p>
+    <h2>Interested in a commission<br/>or a workshop?</h2>
+    <div class="cta-buttons">
+      <a href="about.html" class="btn-elegant">Get in Touch</a>
+      <a href="classes.html" class="btn-elegant-light">See Workshops</a>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span>Dots With Bindu</span>
-        <span class="footer-sub">& Yoga With Bindu</span>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
-        </div>
+        
+        <p>Dots With Bindu<br/><span>& Yoga With Bindu</span></p>
       </div>
-      <ul class="footer-links">
-        <li><a href="yoga.html">Yoga</a></li>
-        <li><a href="reiki.html">Reiki</a></li>
-        <li><a href="art.html">Art</a></li>
-        <li><a href="classes.html">Classes & Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <p class="footer-copy">&copy; 2026 Dots With Bindu. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="reiki.html">Reiki</a>
+        <a href="art.html">Art</a>
+        <a href="classes.html">Classes & Events</a>
+        <a href="about.html">About & Contact</a>
+      </nav>
+      <div class="footer-connect">
+        <p class="eyebrow">Connect</p>
+        <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+        <a href="tel:7742535571">774-253-5571</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dots With Bindu. All rights reserved.</p>
     </div>
   </footer>
 

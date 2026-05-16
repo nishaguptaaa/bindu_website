@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — Yoga With Bindu</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="form.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-logo-text">Yoga With Bindu</span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="reiki.html">Reiki</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="classes.html">Classes & Events</a></li>
+      <li><a href="about.html">About & Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-page">
+
+    <!-- Progress bar -->
+    <div class="form-progress" id="formProgress">
+      <div class="form-progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="form-container">
+
+      <!-- Step indicator -->
+      <div class="form-step-label" id="stepLabel">Step 1 of 5</div>
+
+      <!-- ========================
+           STEP 1: Introduction
+           ======================== -->
+      <div class="form-step active" id="step1">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Registration & Waiver</p>
+          <h1>Yoga With Bindu</h1>
+          <p class="form-subtitle">Registration and Informed Consent for Yoga, Meditation & Reiki Sessions</p>
+        </div>
+
+        <div class="form-intro-text">
+          <p>The Yoga With Bindu Center offers specialized <strong>yoga and meditation sessions</strong> focusing on various health conditions and <strong>Reiki healings with no-touch contact.</strong></p>
+          <p>These sessions incorporate gentle, targeted movements designed to support specific health needs while promoting overall well-being. While beneficial for many, these classes are complementary to — and not replacements for — medical treatment. Your safety is our priority. Please consult your healthcare provider before beginning this or any exercise program.</p>
+          <p class="form-notice">All participants must complete and submit this informed consent form prior to joining any class. Registration will only be confirmed upon receipt of your completed form.</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-field">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="fullName">Full Name (First and Last) <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+          </div>
+          <div class="form-field">
+            <label for="address">Full Address <span class="required">*</span></label>
+            <input type="text" id="address" name="address" placeholder="Street, City, State, ZIP" required />
+          </div>
+          <div class="form-field">
+            <label for="phone">Contact Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
+          </div>
+          <div class="form-field">
+            <label for="dob">Date of Birth (MM/DD/YYYY) <span class="required">*</span></label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+          <div class="form-field">
+            <label for="medicalCare">Are you currently under any medical care? If yes, please explain. <span class="required">*</span></label>
+            <textarea id="medicalCare" name="medicalCare" placeholder="Write 'No' if not applicable" rows="3" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-next" onclick="nextStep(1)">Continue</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 2: Service Selection
+           ======================== -->
+      <div class="form-step" id="step2">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Choose Your Path</p>
+          <h2>Which service are you interested in?</h2>
+          <p class="form-subtitle">Select one to continue. You can register for the other service separately.</p>
+        </div>
+
+        <div class="service-cards service-cards-three">
+          <div class="service-card" id="serviceReiki" onclick="selectService('reiki')">
+            <div class="service-card-inner">
+              <p class="service-card-num">01</p>
+              <h3>Reiki Healing</h3>
+              <p>No-touch energy healing sessions for relaxation, balance, and restoration.</p>
+              <div class="service-prices">
+                <span>45 min — $80</span>
+                <span>60 min — $95</span>
+                <span>90 min — $145</span>
+                <span>5-session pack — $400</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="serviceYoga" onclick="selectService('yoga')">
+            <div class="service-card-inner">
+              <p class="service-card-num">02</p>
+              <h3>Yoga & Meditation</h3>
+              <p>Gentle, breath-centered movement and meditation for body, mind, and soul.</p>
+              <div class="service-prices">
+                <span>Group class — $25 drop-in</span>
+                <span>10-class pack — $200</span>
+                <span>Private session — $90</span>
+                <span>5 private sessions — $400</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="serviceDots" onclick="selectService('dots')">
+            <div class="service-card-inner">
+              <p class="service-card-num">03</p>
+              <h3>Dots With Bindu</h3>
+              <p>Host a dot mandala paint party or workshop — birthdays, girls nights, corporate events, and more.</p>
+              <div class="service-prices">
+                <span>Custom quote based on event</span>
+                <span>Bindu will follow up with details</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="hidden" id="selectedService" name="selectedService" />
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep(2)">Back</button>
+          <button class="form-btn-next" onclick="nextStep(2)">Continue</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 3A: Reiki Details
+           ======================== -->
+      <div class="form-step" id="step3reiki">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Reiki Healing</p>
+          <h2>Tell us a little more</h2>
+          <p class="form-subtitle">Experience the power of Reiki — healing without physical touch. Discover how Reiki can transform your mind, body, and spirit.</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-field">
+            <label>Have you received Reiki before? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="reikiBefore" value="Yes" />
+                <span class="radio-custom"></span>
+                Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="reikiBefore" value="No" />
+                <span class="radio-custom"></span>
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="reikiIntention">Reason for your session / primary intention <span class="required">*</span></label>
+            <textarea id="reikiIntention" name="reikiIntention" placeholder="Briefly describe what brings you to Reiki and what you hope to experience" rows="4"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label>Select your session <span class="required">*</span></label>
+            <div class="session-options">
+              <label class="session-option">
+                <input type="radio" name="reikiSession" value="Reiki Reset 45 min — $80" />
+                <span class="session-option-inner">
+                  <span class="session-name">Reiki Reset</span>
+                  <span class="session-detail">45 minutes</span>
+                  <span class="session-price">$80</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="reikiSession" value="Standard Reiki 60 min — $95" />
+                <span class="session-option-inner">
+                  <span class="session-name">Standard Reiki</span>
+                  <span class="session-detail">60 minutes</span>
+                  <span class="session-price">$95</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="reikiSession" value="Reiki & Reflection 90 min — $145" />
+                <span class="session-option-inner">
+                  <span class="session-name">Reiki & Reflection</span>
+                  <span class="session-detail">90 minutes — Most Popular</span>
+                  <span class="session-price">$145</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="reikiSession" value="Ongoing Reiki Support 5 sessions — $400" />
+                <span class="session-option-inner">
+                  <span class="session-name">Ongoing Reiki Support</span>
+                  <span class="session-detail">5 sessions</span>
+                  <span class="session-price">$400</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep('3reiki')">Back</button>
+          <button class="form-btn-next" onclick="nextStep('3reiki')">Continue</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 3B: Yoga Details
+           ======================== -->
+      <div class="form-step" id="step3yoga">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Yoga & Meditation</p>
+          <h2>Select your class</h2>
+          <p class="form-subtitle">All classes include yoga, breathing practices, and meditation. Modifications are always offered.</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-field">
+            <label>Select your session <span class="required">*</span></label>
+            <div class="session-options">
+              <label class="session-option">
+                <input type="radio" name="yogaSession" value="Group Yoga & Meditation — Sunday 8:15-9:15 AM — $25 drop-in" />
+                <span class="session-option-inner">
+                  <span class="session-name">Group Yoga & Meditation</span>
+                  <span class="session-detail">Sunday 8:15 – 9:15 AM · Drop-in</span>
+                  <span class="session-price">$25</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="yogaSession" value="Group Yoga 10-class pack — $200" />
+                <span class="session-option-inner">
+                  <span class="session-name">Group Yoga 10-Class Pack</span>
+                  <span class="session-detail">Sunday 8:15 – 9:15 AM · One makeup class with 24-hour notice</span>
+                  <span class="session-price">$200</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="yogaSession" value="Private Yoga/Meditation 1 hour — $90" />
+                <span class="session-option-inner">
+                  <span class="session-name">Private Yoga & Meditation</span>
+                  <span class="session-detail">1 hour · Schedule by contact</span>
+                  <span class="session-price">$90</span>
+                </span>
+              </label>
+              <label class="session-option">
+                <input type="radio" name="yogaSession" value="5 Private Yoga sessions — $400" />
+                <span class="session-option-inner">
+                  <span class="session-name">5 Private Sessions Pack</span>
+                  <span class="session-detail">Use within 7 weeks · Changes with 24-hour notice</span>
+                  <span class="session-price">$400</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="yogaNotes">Any questions or notes for Bindu?</label>
+            <textarea id="yogaNotes" name="yogaNotes" placeholder="Optional — feel free to share anything helpful" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep('3yoga')">Back</button>
+          <button class="form-btn-next" onclick="nextStep('3yoga')">Continue</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 3C: Dots With Bindu Event Inquiry
+           ======================== -->
+      <div class="form-step" id="step3dots">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Dots With Bindu</p>
+          <h2>Tell us about your event</h2>
+          <p class="form-subtitle">Bindu brings the joy of dot mandala art to your gathering — paint parties, birthdays, girls nights, corporate events, and more. Share your vision and she'll be in touch with a custom quote.</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-field">
+            <label>Type of event <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="eventType" value="Birthday party" />
+                <span class="radio-custom"></span>
+                Birthday party
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="eventType" value="Girls night" />
+                <span class="radio-custom"></span>
+                Girls night
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="eventType" value="Corporate / team building" />
+                <span class="radio-custom"></span>
+                Corporate / team building
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="eventType" value="Community or library workshop" />
+                <span class="radio-custom"></span>
+                Community or library workshop
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="eventType" value="Other" />
+                <span class="radio-custom"></span>
+                Other
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="eventGuests">Approximate number of guests <span class="required">*</span></label>
+            <input type="text" id="eventGuests" name="eventGuests" placeholder="e.g. 10–15 people" />
+          </div>
+
+          <div class="form-field">
+            <label for="eventDate">Preferred date or timeframe <span class="required">*</span></label>
+            <input type="text" id="eventDate" name="eventDate" placeholder="e.g. late June, first weekend in July" />
+          </div>
+
+          <div class="form-field">
+            <label for="eventLocation">Event location <span class="required">*</span></label>
+            <input type="text" id="eventLocation" name="eventLocation" placeholder="e.g. my home in Westborough, a venue, TBD" />
+          </div>
+
+          <div class="form-field">
+            <label for="eventNotes">Any additional details or questions for Bindu?</label>
+            <textarea id="eventNotes" name="eventNotes" placeholder="Tell us anything else that would help Bindu prepare — theme, age range of guests, budget, etc." rows="4"></textarea>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep('3dots')">Back</button>
+          <button class="form-btn-next" onclick="nextStep('3dots')">Continue</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 4: Payment
+           ======================== -->
+      <div class="form-step" id="step4">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Payment</p>
+          <h2>Choose your payment method</h2>
+          <p class="form-subtitle">Payment is to be made to <strong>Bindu Gupta</strong> by Venmo or Zelle at <strong>774-253-5571.</strong> To confirm your spot, payment must be received at least 1 day before class. <em>No refunds.</em></p>
+        </div>
+
+        <div class="payment-methods">
+          <div class="payment-venmo">
+            <div class="venmo-qr">
+              <!--
+                VENMO QR CODE
+                Save Bindu's Venmo QR code image as: images/venmo-qr.png
+                Then replace this placeholder div with:
+                <img src="images/venmo-qr.png" alt="Scan to pay Bindu on Venmo" />
+              -->
+              <div class="qr-placeholder">
+                <p>Venmo QR Code</p>
+                <p>Save as <code>images/venmo-qr.png</code></p>
+              </div>
+            </div>
+            <p class="venmo-handle">@BinduGupta</p>
+            <p class="venmo-label">Scan to pay on Venmo</p>
+          </div>
+        </div>
+
+        <div class="form-fields" style="margin-top: 3rem;">
+          <div class="form-field">
+            <label>How will you pay? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Paid by Venmo" />
+                <span class="radio-custom"></span>
+                Venmo
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Paid by Zelle" />
+                <span class="radio-custom"></span>
+                Zelle
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="paymentMethod" value="Check or cash" />
+                <span class="radio-custom"></span>
+                Check or cash
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field" id="cashNoteField" style="display:none;">
+            <label for="cashNote">Please describe your check or cash arrangement</label>
+            <input type="text" id="cashNote" name="cashNote" placeholder="e.g. I will bring cash to the first class" />
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep(4)">Back</button>
+          <button class="form-btn-next" onclick="nextStep(4)">Continue to Waiver</button>
+        </div>
+      </div>
+
+      <!-- ========================
+           STEP 5: Waiver & Signature
+           ======================== -->
+      <div class="form-step" id="step5">
+        <div class="form-step-header">
+          <p class="form-eyebrow">Informed Consent</p>
+          <h2>Agreement of Release and Waiver of Liability</h2>
+          <p class="form-subtitle">Please read carefully before signing.</p>
+        </div>
+
+        <div class="waiver-text">
+          <p>I, the undersigned, fully understand and appreciate the risk of participating in the program and knowingly accept it as my responsibility. I understand that I am undertaking this program of my own FREE WILL, in consideration of being permitted to participate in the yoga classes, Reiki (no touch) Healings, health programs, and workshops of yoga/yoga therapy training and yoga-based techniques offered by Yoga With Bindu.</p>
+          <p>I, the undersigned, hereby for myself, my heirs, executors, administrators and assignees, waive and release any and all rights, claims for damages I may have against any one involved, like 'Yoga With Bindu' or Bindu Gupta as individually or separately for any personal injuries or property damage of any and whatever type, nature and amount sustained or claim to be sustained by me as a result of my entrance and participation in the Yoga / Reiki / Meditation program.</p>
+          <p>Furthermore, I, the undersigned, will never institute any action or suit at law or in equity against covenant, nor institute, prosecute or in any way aid in the institution or prosecution or any claim, demand, action or cause of action for damage, costs, loss of services, expenses, or compensation for or on account of any damage, loss or injury either or personal property, or both, whether developed or underdeveloped; resulting or to result; known or unknown; past, present or future; arising out of participation.</p>
+          <p>I recognize that the practice of Yoga requires physical exertion, which may be strenuous and may cause physical injury, and I am fully aware of the risks and hazards involved. I understand that it is my responsibility to consult with a physician prior to and regarding my participation in the Yoga sessions. I have no medical condition that would prevent my full participation in the Yoga (Therapy) Training or receiving Reiki (no touch) healings.</p>
+          <p>I, the undersigned, fully understand the following and know that it pertains to myself: "While practicing all Yoga movements, I will not go beyond the point of pain. Under any circumstances, I will avoid straining myself. In case of pain/strain, I will unwind the movement to alleviate the pain/strain. I also understand that yoga exercises contain movements in which you will be upside down and constantly stretching every muscle in the body, and any or all of these movements could result in serious injury or even death. By signing this document, I take full responsibility for any injury or death. I have read the above release and waiver of liability and fully understand its contents. I voluntarily agree to the terms and conditions stated above. I do not have any medical conditions that would adversely affect me while undergoing this Yoga training. I appreciate the opportunity to participate. If needed, I have or will consult my personal Doctor."</p>
+          <p>The class may be recorded or photographed and may be used for promotion. I am OK with it.</p>
+          <p>My electronic signature/printed name is binding to this liability waiver from this day forth.</p>
+          <p class="waiver-age-note">For students and kids: Ages 16 and above may complete this form. Below the age of 16, parents must fill out this form before the class begins. Please fill out only 1 form per participant.</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-field">
+            <label for="waiverDate">Today's Date <span class="required">*</span></label>
+            <input type="date" id="waiverDate" name="waiverDate" required />
+          </div>
+          <div class="form-field">
+            <label for="signature">Electronic Signature — Type your full name <span class="required">*</span></label>
+            <input type="text" id="signature" name="signature" placeholder="Type your full name as your electronic signature" required />
+            <p class="field-note">By typing your name above you confirm that you have read, understood, and agree to the terms of this waiver. Your typed name constitutes a legally binding electronic signature.</p>
+          </div>
+          <div class="form-field">
+            <label class="checkbox-option">
+              <input type="checkbox" id="waiverAgree" name="waiverAgree" required />
+              <span class="checkbox-custom"></span>
+              <span>I have read the full waiver and agree to its terms. I understand this is a legally binding agreement.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button class="form-btn-back" onclick="prevStep(5)">Back</button>
+          <button class="form-btn-submit" id="submitBtn" onclick="submitForm()">Submit Registration</button>
+        </div>
+
+        <p class="form-submit-note">After submitting, Bindu will be in touch within 1–2 business days to confirm your session details.</p>
+      </div>
+
+      <!-- ========================
+           SUCCESS STATE
+           ======================== -->
+      <div class="form-step" id="stepSuccess">
+        <div class="form-success">
+          <div class="success-icon">&#10003;</div>
+          <h2>Registration Received</h2>
+          <p>Thank you for registering with Yoga With Bindu. Your form has been submitted and Bindu will be in touch within 1–2 business days to confirm your session.</p>
+          <p>Please ensure payment is sent to <strong>@BinduGupta</strong> on Venmo or via Zelle at <strong>774-253-5571</strong> at least 1 day before your session.</p>
+          <a href="index.html" class="form-btn-next" style="display:inline-block; margin-top: 2rem; text-decoration:none;">Return Home</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>

@@ -4,159 +4,175 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yoga With Bindu</title>
-  <meta name="description" content="Yoga with Bindu offers yoga, Reiki, and art experiences rooted in mindfulness, healing, and creativity." />
+  <meta name="description" content="Authentic yoga, Reiki, and meditation rooted in tradition. Yoga With Bindu offers a true practice — not a workout." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <nav class="navbar">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
-      <span>Yoga With Bindu</span>
+      <span class="nav-logo-text">Yoga With Bindu</span>
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="yoga.html">Yoga</a></li>
       <li><a href="reiki.html">Reiki</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="classes.html">Classes & Events</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About & Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content fade-in">
-      <div class="hero-logo-wrap">
-        <img src="images/logo_color.PNG" alt="Yoga With Bindu" class="hero-logo-img" />
-      </div>
-      <p class="hero-tagline">Mindfulness &nbsp;·&nbsp; Healing &nbsp;·&nbsp; Creativity</p>
-      <h1>Yoga With Bindu</h1>
-      <p class="hero-sub">A sanctuary for movement, healing, and creativity in every breath.</p>
-
-      <div class="announcement-pill">
-        <span class="pill-dot"></span>
-        <strong>Weekly Group Yoga & Meditation</strong>&nbsp; — &nbsp;Sundays at 8:15 AM
-        <a href="classes.html">See schedule →</a>
-      </div>
-
-      <div class="hero-buttons">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register Now</a>
-        <a href="about.html" class="btn btn-outline">Meet Bindu</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-parallax" id="heroParallax">
+      <img src="images/backgrounds/yogagolden3.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
     </div>
-    <div class="hero-scroll-hint">&#8595;</div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Yoga &nbsp;&middot;&nbsp; Reiki &nbsp;&middot;&nbsp; Meditation</p>
+      <h1 class="hero-title reveal-up delay-1">Yoga<br/><em>With Bindu</em></h1>
+      <div class="hero-divider reveal-up delay-2"></div>
+      <p class="hero-sub reveal-up delay-3">An authentic practice rooted in tradition,<br/>offered with care and presence.</p>
+      <a href="yoga.html" class="hero-cta reveal-up delay-4">Begin Your Practice</a>
+    </div>
+    <div class="hero-scroll-indicator" id="heroScroll">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
   </section>
 
-  <!-- What I Offer -->
-  <section class="offerings">
+  <!-- INTRO STATEMENT -->
+  <section class="intro-statement">
+    <div class="intro-inner reveal-up">
+      <p class="intro-eyebrow">A different kind of practice</p>
+      <h2>Yoga is not a workout.<br/><em>It is a way of living.</em></h2>
+      <p class="intro-body">Bindu brings decades of cultural knowledge, authentic lineage, and genuine care to every session. Whether you come for yoga, Reiki, or creative expression — you will leave changed.</p>
+    </div>
+  </section>
+
+  <!-- OFFERINGS -->
+  <section class="offerings-section">
+
+    <a href="yoga.html" class="offering-panel reveal-panel">
+      <div class="offering-img">
+        <img src="images/backgrounds/yogarose2.jpg" alt="Yoga with Bindu" />
+      </div>
+      <div class="offering-text">
+        <p class="offering-num">01</p>
+        <h3>Yoga &<br/>Meditation</h3>
+        <p>Gentle, breath-centered practice for body, mind, and soul. Weekly group classes and private sessions.</p>
+        <span class="offering-link">Explore</span>
+      </div>
+    </a>
+
+    <a href="reiki.html" class="offering-panel reveal-panel">
+      <div class="offering-img">
+        <img src="images/backgrounds/lotus2.jpg" alt="Reiki healing" />
+      </div>
+      <div class="offering-text">
+        <p class="offering-num">02</p>
+        <h3>Reiki<br/>Healing</h3>
+        <p>No-touch energy healing sessions to restore balance and invite deep, lasting calm.</p>
+        <span class="offering-link">Explore</span>
+      </div>
+    </a>
+
+    <a href="art.html" class="offering-panel reveal-panel">
+      <div class="offering-img">
+        <img src="images/backgrounds/mandala.jpg" alt="Dots With Bindu" />
+      </div>
+      <div class="offering-text">
+        <p class="offering-num">03</p>
+        <h3>Dots<br/>With Bindu</h3>
+        <p>Meditative dot mandala art — one dot, one breath, one moment at a time.</p>
+        <span class="offering-link">Explore</span>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- FULL BLEED QUOTE -->
+  <section class="quote-section">
+    <div class="quote-bg" style="background-image:url('images/backgrounds/templelotus2.jpg'); background-size:cover; background-position:center; background-attachment:fixed;"></div>
+    <div class="quote-overlay"></div>
+    <div class="quote-content reveal-up">
+      <div class="quote-mark-line"></div>
+      <blockquote>The pose begins when<br/><em>you want to leave it.</em></blockquote>
+      <div class="quote-mark-line"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
     <div class="container-inner">
-      <div class="section-label">What I Offer</div>
-      <h2 class="section-title">Find Your Path</h2>
-      <div class="offering-cards">
-        <a href="yoga.html" class="offering-card">
-          <div class="offering-icon">&#127795;</div>
-          <h3>Yoga & Meditation</h3>
-          <p>Gentle movement, pranayama, and meditation. Weekly group classes and private sessions available.</p>
-          <span class="card-link">Explore →</span>
-        </a>
-        <a href="reiki.html" class="offering-card">
-          <div class="offering-icon">&#10024;</div>
-          <h3>Reiki Healing</h3>
-          <p>No-touch energy healing sessions to support relaxation, balance, and overall well-being.</p>
-          <span class="card-link">Explore →</span>
-        </a>
-        <a href="art.html" class="offering-card">
-          <div class="offering-icon">&#127912;</div>
-          <h3>Dots With Bindu</h3>
-          <p>Artwork and creative workshops rooted in joy, patience, and expression.</p>
-          <span class="card-link">Explore →</span>
-        </a>
+      <div class="section-header reveal-up">
+        <p class="eyebrow">Kind Words</p>
+        <h2>What Students Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial reveal-up">
+          <p>"She has a calm, soothing, and cheerful attitude, making the class fun for everyone."</p>
+          <cite>Resmi Nair</cite>
+        </div>
+        <div class="testimonial reveal-up delay-1">
+          <p>"After breathing exercises, gentle stretches, and poses, I go home feeling relaxed and energized."</p>
+          <cite>Kathy McKenzie</cite>
+        </div>
+        <div class="testimonial reveal-up delay-2">
+          <p>"Lessons are easy to follow and great for people of all skill levels."</p>
+          <cite>Abhi Gupta</cite>
+        </div>
+      </div>
+      <div class="testimonials-cta reveal-up">
+        <a href="https://www.google.com/maps/place/Yoga+With+Bindu+%26+Dots+With+Bindu/@42.2814509,-71.6531007,17z/data=!4m8!3m7!1s0x89e40b9fbec5abdf:0x333b40762bace972!8m2!3d42.2814509!4d-71.6531007!9m1!1b1!16s%2Fg%2F11h7vm0424?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-link">Read all reviews on Google</a>
       </div>
     </div>
   </section>
 
-  <!-- Pull Quote -->
-  <section class="pull-quote">
-    <blockquote>"The pose begins when you want to leave it."</blockquote>
-  </section>
-
-  <!-- About Teaser -->
-  <section class="about-teaser">
-    <div class="about-teaser-inner">
-      <div class="about-teaser-image">
-        <img src="images/bindu.jpeg" alt="Bindu teaching yoga" />
-      </div>
-      <div class="about-teaser-text">
-        <div class="section-label">About Bindu</div>
-        <h2>Calm, welcoming, and thoughtful guidance</h2>
-        <p>Bindu offers yoga, Reiki, and creative experiences that help people slow down, reconnect, and feel supported. Her work is rooted in care, accessibility, and a warm, encouraging presence.</p>
-        <p>Students consistently describe her teaching as soothing, knowledgeable, detailed, and encouraging — whether on the mat, at the healing table, or in a creative workshop.</p>
-        <a href="about.html" class="btn btn-primary">More About Bindu</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
+  <!-- ANNOUNCEMENT STRIP -->
+  <section class="announcement-section reveal-up">
     <div class="container-inner">
-      <div class="section-label">Kind Words</div>
-      <h2 class="section-title">What Students Are Saying</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>She has a calm, soothing, and cheerful attitude, making the class fun for everyone.</p>
-          <span class="reviewer">— Resmi Nair</span>
+      <div class="announcement-inner">
+        <div>
+          <p class="eyebrow">Now Ongoing</p>
+          <h3>Weekly Group Yoga & Meditation</h3>
+          <p>Every Sunday &middot; 8:15 AM &ndash; 9:15 AM &middot; $25 drop-in or $200 for 12 classes</p>
         </div>
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>After breathing exercises, gentle stretches, and poses, I go home feeling relaxed and energized.</p>
-          <span class="reviewer">— Kathy McKenzie</span>
-        </div>
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>Lessons are easy to follow and great for people of all skill levels.</p>
-          <span class="reviewer">— Abhi Gupta</span>
-        </div>
-      </div>
-      <div class="center-button">
-        <a href="https://www.google.com/maps/place/Yoga+With+Bindu+%26+Dots+With+Bindu/@42.2814509,-71.6531007,17z/data=!4m8!3m7!1s0x89e40b9fbec5abdf:0x333b40762bace972!8m2!3d42.2814509!4d-71.6531007!9m1!1b1!16s%2Fg%2F11h7vm0424?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline">More Reviews on Google ↗</a>
+        <a href="register.html" target="_blank" class="btn-elegant">Register</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <h2>Questions about yoga, Reiki, art, or community offerings?</h2>
-    <div class="hero-buttons" style="justify-content:center; margin-top:1.5rem;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDmO1rXsu9F5pKlTJH8ATYEiLgyaK2-BLcnniKJpmoJjvrbg/viewform" target="_blank" class="btn btn-primary">Register for a Class</a>
-      <a href="contact.html" class="btn btn-outline">Contact Bindu</a>
-    </div>
-  </section>
-
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span>Yoga With Bindu</span>
-        <span class="footer-sub">& Dots With Bindu</span>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
-        </div>
+        
+        <p>Yoga With Bindu<br/><span>& Dots With Bindu</span></p>
       </div>
-      <ul class="footer-links">
-        <li><a href="yoga.html">Yoga</a></li>
-        <li><a href="reiki.html">Reiki</a></li>
-        <li><a href="art.html">Art</a></li>
-        <li><a href="classes.html">Classes & Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="reiki.html">Reiki</a>
+        <a href="art.html">Art</a>
+        <a href="classes.html">Classes & Events</a>
+        <a href="about.html">About & Contact</a>
+      </nav>
+      <div class="footer-connect">
+        <p class="eyebrow">Connect</p>
+        <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+        <a href="tel:7742535571">774-253-5571</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
 

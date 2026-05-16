@@ -1,102 +1,155 @@
 // ============================
-// YOGA WITH BINDU — script.js v2
+// YOGA WITH BINDU — script.js v3
 // ============================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Navbar scroll shadow ----
+  // ---- Navbar state ----
   const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-    });
-  }
+  const hero   = document.querySelector('.hero');
 
-  // ---- Hamburger menu ----
+  function updateNavbar() {
+    if (!navbar) return;
+    const scrolled = window.scrollY > 60;
+    navbar.classList.toggle('scrolled', scrolled);
+    if (hero) {
+      navbar.classList.toggle('hero-dark', !scrolled);
+    }
+  }
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
+
+  // ---- Hamburger ----
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
     });
   }
 
-  // ---- Scroll fade-in for cards ----
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
+  // ---- Parallax hero ----
+  const heroParallax = document.getElementById('heroParallax');
+  if (heroParallax) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const heroH   = hero ? hero.offsetHeight : window.innerHeight;
+      if (scrollY < heroH) {
+        heroParallax.style.transform = `translateY(${scrollY * 0.4}px)`;
+      }
+    }, { passive: true });
+  }
+
+  // ---- Scroll reveal ----
+  const revealEls = document.querySelectorAll('.reveal-up, .reveal-panel');
+  if (revealEls.length) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+    revealEls.forEach(el => {
+      // If already in viewport on load, show immediately
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      } else {
+        revealObserver.observe(el);
       }
     });
-  }, { threshold: 0.1 });
+  }
 
-  document.querySelectorAll('.offering-card, .testimonial-card, .soft-card, .event-card, .offering-row-card, .credential-item').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity 0.55s ease ${i * 0.07}s, transform 0.55s ease ${i * 0.07}s`;
-    observer.observe(el);
-  });
+  // ---- Scroll indicator click ----
+  const heroScroll = document.getElementById('heroScroll');
+  if (heroScroll) {
+    heroScroll.addEventListener('click', () => {
+      const nextSection = hero ? hero.nextElementSibling : null;
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
-  // ---- Art Gallery Slider ----
-  const track  = document.querySelector('.gallery-track');
+  // ---- Art Gallery — fixed scroll interference ----
+  const track   = document.querySelector('.gallery-track');
   if (track) {
     const slides     = document.querySelectorAll('.gallery-slide');
-    const dotsWrap   = document.getElementById('galleryDots');
-    const thumbsWrap = document.getElementById('galleryThumbs');
-    const thumbs     = thumbsWrap ? thumbsWrap.querySelectorAll('.gallery-thumb') : [];
-    const prevBtn    = document.querySelector('.gallery-btn.prev');
-    const nextBtn    = document.querySelector('.gallery-btn.next');
+    const prevBtn    = document.querySelector('.gallery-arrow.prev');
+    const nextBtn    = document.querySelector('.gallery-arrow.next');
+    const counter    = document.querySelector('.gallery-counter');
     let current      = 0;
+    let isDragging   = false;
+    let startX       = 0;
+    let startY       = 0;
     let autoInterval;
+    const total      = slides.length;
 
-    // Build dots dynamically
-    if (dotsWrap) {
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Slide ${i+1}`);
-        dotsWrap.appendChild(dot);
-      });
+    function updateCounter() {
+      if (counter) counter.textContent = `${String(current + 1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
     }
-
-    const dots = dotsWrap ? dotsWrap.querySelectorAll('.gallery-dot') : [];
 
     function goTo(index) {
-      current = (index + slides.length) % slides.length;
+      current = (index + total) % total;
       track.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i)   => d.classList.toggle('active', i === current));
-      thumbs.forEach((t, i) => t.classList.toggle('active', i === current));
-      // scroll thumb into view
-      if (thumbs[current]) {
-        thumbs[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
+      updateCounter();
     }
 
-    function startAuto() { autoInterval = setInterval(() => goTo(current + 1), 4500); }
+    function startAuto() { autoInterval = setInterval(() => goTo(current + 1), 5000); }
     function stopAuto()  { clearInterval(autoInterval); }
 
     if (prevBtn) prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
     if (nextBtn) nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
-    dots.forEach((d, i) => d.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
-    thumbs.forEach((t, i) => t.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
 
-    // Swipe support
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend',   e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) { stopAuto(); goTo(current + (diff > 0 ? 1 : -1)); startAuto(); }
-    });
-
-    // Keyboard nav
+    // Keyboard navigation
     document.addEventListener('keydown', e => {
-      if (!document.querySelector('.gallery-container')) return;
+      const galleryVisible = track.getBoundingClientRect().top < window.innerHeight &&
+                             track.getBoundingClientRect().bottom > 0;
+      if (!galleryVisible) return;
       if (e.key === 'ArrowLeft')  { stopAuto(); goTo(current - 1); startAuto(); }
       if (e.key === 'ArrowRight') { stopAuto(); goTo(current + 1); startAuto(); }
     });
+
+    // Touch — only trigger on HORIZONTAL swipes, let vertical scroll pass through
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isDragging = false;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', e => {
+      if (!startX) return;
+      const diffX = Math.abs(e.touches[0].clientX - startX);
+      const diffY = Math.abs(e.touches[0].clientY - startY);
+      // Only prevent default if clearly horizontal
+      if (diffX > diffY && diffX > 10) {
+        isDragging = true;
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    track.addEventListener('touchend', e => {
+      if (!isDragging) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        stopAuto();
+        goTo(current + (diff > 0 ? 1 : -1));
+        startAuto();
+      }
+      isDragging = false;
+      startX = 0;
+      startY = 0;
+    }, { passive: true });
 
     goTo(0);
     startAuto();

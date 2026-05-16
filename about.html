@@ -3,66 +3,59 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About — Yoga With Bindu</title>
-  <meta name="description" content="Learn more about Bindu's approach to yoga, Reiki, and creative work." />
+  <title>About & Contact — Yoga With Bindu</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar scrolled" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo_bw.PNG" alt="Yoga with Bindu" class="nav-logo-img" />
-      <span>Yoga With Bindu</span>
+      <span class="nav-logo-text">Yoga With Bindu</span>
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="yoga.html">Yoga</a></li>
       <li><a href="reiki.html">Reiki</a></li>
       <li><a href="art.html">Art</a></li>
       <li><a href="classes.html">Classes & Events</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html" class="active">About & Contact</a></li>
     </ul>
   </nav>
 
-  <section class="page-hero">
-    <div class="section-label">About Bindu</div>
-    <h1>Warm, supportive guidance rooted in care and presence</h1>
-    <p>Bindu offers yoga, Reiki, and art experiences that help people feel grounded, calm, and connected.</p>
-  </section>
+  <!-- ABOUT SPLIT SECTION -->
+  <section class="about-split" style="margin-top: 72px;">
+    <div class="about-image-col">
+      <!--
+        ABOUT PAGE PHOTO OF BINDU
+        This already exists — just keep this line:
+        <img src="images/bindu.jpeg" alt="Bindu" />
+        It will fill the left column.
+      -->
+      <img src="images/bindu.jpeg" alt="Bindu teaching yoga" />
+    </div>
+    <div class="about-text-col">
+      <div class="reveal-up">
+        <p class="eyebrow">About Bindu</p>
+        <h2>Warm, present, and deeply rooted in tradition</h2>
+        <p>Bindu offers yoga, Reiki, and creative experiences that help people feel grounded, calm, and connected. Her teaching is rooted in the authentic lineage of yoga — not as a fitness trend, but as a complete philosophy of living.</p>
+        <p>Students consistently describe her as calm, knowledgeable, detailed, and deeply encouraging. Whether guiding a group class, offering a private Reiki session, or leading a dot mandala workshop, her goal is always the same: to help you feel supported and at home in your own body.</p>
 
-  <!-- Photo + Intro -->
-  <section class="about-intro-section">
-    <div class="about-intro-inner">
-      <div class="about-intro-image">
-        <img src="images/bindu.jpeg" alt="Bindu teaching yoga" />
-      </div>
-      <div class="about-intro-text">
-        <div class="section-label">Her Approach</div>
-        <h2>Mindfulness, patience, and encouragement</h2>
-        <p>Bindu is known for creating a calm, welcoming atmosphere where every student feels seen and supported. Her teaching is described as soothing, knowledgeable, detailed, and deeply encouraging.</p>
-        <p>Whether guiding yoga, offering Reiki, or leading creative work, her goal is to help people feel comfortable, supported, and inspired — exactly as they are.</p>
-
-        <div class="credentials-grid">
-          <div class="credential-item">
-            <div class="cred-icon">&#127795;</div>
+        <div class="credentials-row">
+          <div class="credential">
             <h4>Yoga Instructor</h4>
             <p>Breath & meditation guide</p>
           </div>
-          <div class="credential-item">
-            <div class="cred-icon">&#10024;</div>
+          <div class="credential">
             <h4>Reiki Practitioner</h4>
             <p>Energy healing sessions</p>
           </div>
-          <div class="credential-item">
-            <div class="cred-icon">&#127912;</div>
-            <h4>Artist</h4>
+          <div class="credential">
+            <h4>Dot Mandala Artist</h4>
             <p>Dots With Bindu</p>
           </div>
-          <div class="credential-item">
-            <div class="cred-icon">&#128218;</div>
+          <div class="credential">
             <h4>Community Teacher</h4>
             <p>Library & workshop classes</p>
           </div>
@@ -71,61 +64,113 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container-inner">
-      <div class="section-label">Student Feedback</div>
-      <h2 class="section-title">Trusted, Calming, and Accessible</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>She explains every pose in detail, allowing you to do each in your own time.</p>
-          <span class="reviewer">— Srividya Ramachandran</span>
-        </div>
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>Yoga is an essential part of my life now, and I look forward to learning more every time I come.</p>
-          <span class="reviewer">— Manpreet Soin</span>
-        </div>
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <p>The atmosphere is full of positive vibrations, and at the end of class, you feel relaxed and energized.</p>
-          <span class="reviewer">— Resmi Nair</span>
-        </div>
-      </div>
-      <div class="center-button">
-        <a href="https://www.google.com/maps/place/Yoga+With+Bindu+%26+Dots+With+Bindu/@42.2814509,-71.6531007,17z/data=!4m8!3m7!1s0x89e40b9fbec5abdf:0x333b40762bace972!8m2!3d42.2814509!4d-71.6531007!9m1!1b1!16s%2Fg%2F11h7vm0424?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline">Read All Google Reviews ↗</a>
+  <!-- PHILOSOPHY -->
+  <section class="page-content" style="background: var(--parchment);">
+    <div class="page-content-inner">
+      <div class="reveal-up">
+        <p class="eyebrow">Her Philosophy</p>
+        <h2>Yoga is not a workout</h2>
+        <p>In a world where yoga has been reduced to a fitness class, Bindu offers something different — a practice that honors its origins. She brings deep cultural knowledge and genuine reverence for the tradition to every session, teaching asana alongside pranayama, philosophy, and the quieter dimensions of the practice.</p>
+        <p>She is especially passionate about making this authentic practice accessible to people who have felt that wellness spaces were not meant for them. They are. You are welcome here, exactly as you are.</p>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Want to Learn More?</h2>
-    <div class="hero-buttons" style="justify-content:center; margin-top:1.5rem;">
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-      <a href="classes.html" class="btn btn-outline">See the Schedule</a>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container-inner">
+      <div class="section-header reveal-up">
+        <p class="eyebrow">Student Feedback</p>
+        <h2>Trusted, calming, and accessible</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial reveal-up">
+          <p>"She explains every pose in detail, allowing you to do each in your own time."</p>
+          <cite>Srividya Ramachandran</cite>
+        </div>
+        <div class="testimonial reveal-up delay-1">
+          <p>"Yoga is an essential part of my life now, and I look forward to learning more every time I come."</p>
+          <cite>Manpreet Soin</cite>
+        </div>
+        <div class="testimonial reveal-up delay-2">
+          <p>"The atmosphere is full of positive vibrations, and at the end of class, you feel relaxed and energized."</p>
+          <cite>Resmi Nair</cite>
+        </div>
+      </div>
+      <div class="testimonials-cta reveal-up">
+        <a href="https://www.google.com/maps/place/Yoga+With+Bindu+%26+Dots+With+Bindu/@42.2814509,-71.6531007,17z" target="_blank" class="text-link">Read all reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p>The best way to book any session is to fill out the registration form. Bindu will follow up within 1&ndash;2 business days to confirm details and scheduling.</p>
+        <p>For questions about art, commissions, workshops, or general inquiries, reach out directly by phone or email.</p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <strong>Phone</strong>
+            <a href="tel:7742535571">774-253-5571</a>
+          </div>
+          <div class="contact-detail">
+            <strong>Email</strong>
+            <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">@doyogawithbindu</a>
+          </div>
+          <div class="contact-detail">
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Dots With Bindu</a>
+          </div>
+          <div class="contact-detail">
+            <strong>Response Time</strong>
+            <span>Within 1&ndash;2 business days</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-col reveal-up delay-1">
+        <p class="eyebrow">Booking</p>
+        <h2>Register for a session</h2>
+        <p>The registration form includes service selection, waiver language, and response tracking. It is the easiest way to sign up for any of Bindu's current offerings — yoga, Reiki, or otherwise.</p>
+        <a href="register.html" class="btn-elegant">Open Registration Form</a>
+        <div style="margin-top: 1.5rem;">
+          <a href="mailto:yogawithbindu@gmail.com" class="text-link">Or email Bindu directly</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span>Yoga With Bindu</span>
-        <span class="footer-sub">& Dots With Bindu</span>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
-        </div>
+        
+        <p>Yoga With Bindu<br/><span>& Dots With Bindu</span></p>
       </div>
-      <ul class="footer-links">
-        <li><a href="yoga.html">Yoga</a></li>
-        <li><a href="reiki.html">Reiki</a></li>
-        <li><a href="art.html">Art</a></li>
-        <li><a href="classes.html">Classes & Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <p class="footer-copy">&copy; 2026 Yoga With Bindu. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="yoga.html">Yoga</a>
+        <a href="reiki.html">Reiki</a>
+        <a href="art.html">Art</a>
+        <a href="classes.html">Classes & Events</a>
+        <a href="about.html">About & Contact</a>
+      </nav>
+      <div class="footer-connect">
+        <p class="eyebrow">Connect</p>
+        <a href="https://www.instagram.com/doyogawithbindu/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/DotsWithBindu/" target="_blank">Facebook</a>
+        <a href="mailto:yogawithbindu@gmail.com">yogawithbindu@gmail.com</a>
+        <a href="tel:7742535571">774-253-5571</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yoga With Bindu. All rights reserved.</p>
     </div>
   </footer>
 

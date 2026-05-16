@@ -1,0 +1,562 @@
+/* ============================
+   YOGA WITH BINDU — form.css
+   ============================ */
+
+/* ---- Page layout ---- */
+.form-page {
+  min-height: 100vh;
+  background: var(--ivory);
+  padding-top: 72px;
+}
+
+.form-progress {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--parchment-dark);
+  z-index: 99;
+}
+.form-progress-bar {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.5s ease;
+  width: 0%;
+}
+
+.form-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.form-step-label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 3rem;
+}
+
+/* ---- Steps ---- */
+.form-step {
+  display: none;
+  animation: formFadeIn 0.4s ease;
+}
+.form-step.active {
+  display: block;
+}
+@keyframes formFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Step header ---- */
+.form-step-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+.form-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.form-step-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.8rem;
+}
+.form-step-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.8rem;
+}
+.form-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--brown-warm);
+  line-height: 1.8;
+}
+.form-subtitle strong { color: var(--charcoal); }
+
+/* ---- Intro text ---- */
+.form-intro-text {
+  background: var(--parchment);
+  border-left: 2px solid var(--gold);
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+  border-radius: 0 4px 4px 0;
+}
+.form-intro-text p {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: var(--brown-warm);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.form-intro-text p:last-child { margin-bottom: 0; }
+.form-notice {
+  color: var(--charcoal) !important;
+  font-weight: 500;
+  border-top: 1px solid var(--parchment-dark);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* ---- Form fields ---- */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.form-field label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+}
+.required { color: var(--gold); }
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="date"],
+.form-field textarea {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--charcoal);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--parchment-dark);
+  padding: 0.8rem 0;
+  transition: border-color 0.3s ease;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  border-bottom-color: var(--gold);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--stone);
+  font-style: italic;
+}
+
+.field-note {
+  font-size: 0.78rem;
+  color: var(--stone);
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 0.3rem;
+}
+
+/* ---- Radio groups ---- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--charcoal-mid);
+}
+.radio-option input[type="radio"] {
+  display: none;
+}
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--stone);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.radio-option input[type="radio"]:checked + .radio-custom {
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: inset 0 0 0 3px var(--ivory);
+}
+
+/* ---- Checkbox ---- */
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--charcoal-mid);
+  line-height: 1.6;
+}
+.checkbox-option input[type="checkbox"] {
+  display: none;
+}
+.checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--stone);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* ---- Service selection cards ---- */
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.service-cards-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 700px) {
+  .service-cards-three {
+    grid-template-columns: 1fr;
+  }
+}
+.service-card {
+  border: 1px solid var(--parchment-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--warm-white, #fffaf5);
+}
+.service-card:hover {
+  border-color: var(--gold);
+}
+.service-card.selected {
+  border-color: var(--gold);
+  background: var(--parchment);
+}
+.service-card-inner {
+  padding: 2rem;
+}
+.service-card-num {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+.service-card p {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--brown-warm);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+.service-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-top: 1px solid var(--parchment-dark);
+  padding-top: 1rem;
+}
+.service-prices span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Session options ---- */
+.session-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.session-option {
+  cursor: pointer;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+.session-option:first-child {
+  border-top: 1px solid var(--parchment-dark);
+}
+.session-option input[type="radio"] {
+  display: none;
+}
+.session-option-inner {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.2rem 0;
+  transition: all 0.2s ease;
+}
+.session-option:hover .session-option-inner {
+  padding-left: 0.5rem;
+}
+.session-option input[type="radio"]:checked ~ .session-option-inner {
+  padding-left: 0.5rem;
+}
+.session-option input[type="radio"]:checked ~ .session-option-inner .session-name {
+  color: var(--gold);
+}
+.session-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--charcoal);
+  transition: color 0.2s;
+}
+.session-detail {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--stone);
+  letter-spacing: 0.05em;
+  grid-column: 1;
+  margin-top: -0.3rem;
+}
+.session-price {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  grid-row: 1 / 3;
+  grid-column: 3;
+  align-self: center;
+}
+
+/* ---- Payment section ---- */
+.payment-methods {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+.venmo-qr {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border: 1px solid var(--parchment-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.venmo-qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.qr-placeholder {
+  text-align: center;
+  padding: 1rem;
+}
+.qr-placeholder p {
+  font-size: 0.75rem;
+  color: var(--stone);
+  line-height: 1.6;
+}
+.qr-placeholder code {
+  font-size: 0.7rem;
+  background: var(--parchment-dark);
+  padding: 0.1rem 0.3rem;
+  border-radius: 2px;
+}
+.venmo-handle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  margin-bottom: 0.3rem;
+}
+.venmo-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+/* ---- Waiver ---- */
+.waiver-text {
+  background: var(--parchment);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--parchment-dark);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+.waiver-text p {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--charcoal-mid);
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+}
+.waiver-text p:last-child { margin-bottom: 0; }
+.waiver-age-note {
+  border-top: 1px solid var(--parchment-dark);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--stone) !important;
+  font-size: 0.85rem !important;
+}
+
+/* ---- Navigation buttons ---- */
+.form-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  border-top: 1px solid var(--parchment-dark);
+}
+.form-btn-back {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  transition: color 0.3s;
+}
+.form-btn-back:hover { color: var(--charcoal); }
+
+.form-btn-next {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: var(--parchment);
+  border: 1px solid var(--charcoal);
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-btn-next:hover {
+  background: var(--charcoal);
+  color: var(--parchment);
+}
+.form-btn-submit {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-btn-submit:hover {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+}
+.form-btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-submit-note {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--stone);
+  font-style: italic;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* ---- Success state ---- */
+.form-success {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin: 0 auto 2rem;
+}
+.form-success h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.form-success p {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--brown-warm);
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+/* ---- Error state ---- */
+.field-error {
+  border-bottom-color: #c0392b !important;
+}
+.error-msg {
+  font-size: 0.75rem;
+  color: #c0392b;
+  margin-top: 0.3rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .service-cards { grid-template-columns: 1fr; }
+  .form-container { padding: 2rem 1.5rem 4rem; }
+  .waiver-text { padding: 1.5rem; }
+  .session-option-inner {
+    grid-template-columns: 1fr auto;
+  }
+  .session-detail { display: none; }
+}
