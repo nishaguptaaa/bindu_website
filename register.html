@@ -337,7 +337,7 @@
 
           <div class="form-field">
             <label for="eventLocation">Event location <span class="required">*</span></label>
-            <input type="text" id="eventLocation" name="eventLocation" placeholder="e.g. my home in Westborough, a venue, TBD" />
+            <input type="text" id="eventLocation" name="eventLocation" placeholder="e.g. my home in Shrewsbury, a venue, TBD" />
           </div>
 
           <div class="form-field">
@@ -419,13 +419,23 @@
            STEP 5: Waiver & Signature
            ======================== -->
       <div class="form-step" id="step5">
-        <div class="form-step-header">
+
+        <!-- Yoga/Reiki waiver header -->
+        <div class="form-step-header" id="waiverHeaderFull">
           <p class="form-eyebrow">Informed Consent</p>
           <h2>Agreement of Release and Waiver of Liability</h2>
           <p class="form-subtitle">Please read carefully before signing.</p>
         </div>
 
-        <div class="waiver-text">
+        <!-- Dots waiver header -->
+        <div class="form-step-header" id="waiverHeaderDots" style="display:none;">
+          <p class="form-eyebrow">Event Agreement</p>
+          <h2>Dots With Bindu — Event Inquiry Agreement</h2>
+          <p class="form-subtitle">Please read and agree before submitting your inquiry.</p>
+        </div>
+
+        <!-- Full yoga/reiki waiver text -->
+        <div class="waiver-text" id="waiverTextFull">
           <p>I, the undersigned, fully understand and appreciate the risk of participating in the program and knowingly accept it as my responsibility. I understand that I am undertaking this program of my own FREE WILL, in consideration of being permitted to participate in the yoga classes, Reiki (no touch) Healings, health programs, and workshops of yoga/yoga therapy training and yoga-based techniques offered by Yoga With Bindu.</p>
           <p>I, the undersigned, hereby for myself, my heirs, executors, administrators and assignees, waive and release any and all rights, claims for damages I may have against any one involved, like 'Yoga With Bindu' or Bindu Gupta as individually or separately for any personal injuries or property damage of any and whatever type, nature and amount sustained or claim to be sustained by me as a result of my entrance and participation in the Yoga / Reiki / Meditation program.</p>
           <p>Furthermore, I, the undersigned, will never institute any action or suit at law or in equity against covenant, nor institute, prosecute or in any way aid in the institution or prosecution or any claim, demand, action or cause of action for damage, costs, loss of services, expenses, or compensation for or on account of any damage, loss or injury either or personal property, or both, whether developed or underdeveloped; resulting or to result; known or unknown; past, present or future; arising out of participation.</p>
@@ -436,6 +446,16 @@
           <p class="waiver-age-note">For students and kids: Ages 16 and above may complete this form. Below the age of 16, parents must fill out this form before the class begins. Please fill out only 1 form per participant.</p>
         </div>
 
+        <!-- Short dots event agreement -->
+        <div class="waiver-text" id="waiverTextDots" style="display:none;">
+          <p>Thank you for your interest in hosting a Dots With Bindu event. By submitting this inquiry form, you acknowledge and agree to the following:</p>
+          <p><strong>Event Confirmation.</strong> This form is an inquiry only. Your event is not confirmed until you have received a follow-up from Bindu with a custom quote and both parties have agreed on the details.</p>
+          <p><strong>Payment.</strong> A deposit or full payment may be required to secure your event date. Payment terms will be discussed and agreed upon during the follow-up conversation. No refunds once the event is confirmed and scheduled.</p>
+          <p><strong>Photo & Promotion.</strong> Events may be photographed or recorded for use in Dots With Bindu promotional materials, including social media. Please let Bindu know at the time of booking if any guests do not wish to be photographed.</p>
+          <p><strong>Cancellation.</strong> If you need to cancel or reschedule, please provide at least 7 days notice. Late cancellations may result in a cancellation fee to cover preparation costs.</p>
+          <p>By signing below, you confirm that you have read and agree to these terms.</p>
+        </div>
+
         <div class="form-fields">
           <div class="form-field">
             <label for="waiverDate">Today's Date <span class="required">*</span></label>
@@ -444,23 +464,23 @@
           <div class="form-field">
             <label for="signature">Electronic Signature — Type your full name <span class="required">*</span></label>
             <input type="text" id="signature" name="signature" placeholder="Type your full name as your electronic signature" required />
-            <p class="field-note">By typing your name above you confirm that you have read, understood, and agree to the terms of this waiver. Your typed name constitutes a legally binding electronic signature.</p>
+            <p class="field-note">By typing your name above you confirm that you have read, understood, and agree to the terms above. Your typed name constitutes a legally binding electronic signature.</p>
           </div>
           <div class="form-field">
             <label class="checkbox-option">
               <input type="checkbox" id="waiverAgree" name="waiverAgree" required />
               <span class="checkbox-custom"></span>
-              <span>I have read the full waiver and agree to its terms. I understand this is a legally binding agreement.</span>
+              <span id="waiverCheckboxLabel">I have read the full waiver and agree to its terms. I understand this is a legally binding agreement.</span>
             </label>
           </div>
         </div>
 
         <div class="form-nav">
           <button class="form-btn-back" onclick="prevStep(5)">Back</button>
-          <button class="form-btn-submit" id="submitBtn" onclick="submitForm()">Submit Registration</button>
+          <button class="form-btn-submit" id="submitBtn" onclick="submitForm()">Submit</button>
         </div>
 
-        <p class="form-submit-note">After submitting, Bindu will be in touch within 1–2 business days to confirm your session details.</p>
+        <p class="form-submit-note" id="submitNote">After submitting, Bindu will be in touch within 1–2 business days to confirm your session details.</p>
       </div>
 
       <!-- ========================
@@ -469,9 +489,9 @@
       <div class="form-step" id="stepSuccess">
         <div class="form-success">
           <div class="success-icon">&#10003;</div>
-          <h2>Registration Received</h2>
-          <p>Thank you for registering with Yoga With Bindu. Your form has been submitted and Bindu will be in touch within 1–2 business days to confirm your session.</p>
-          <p>Please ensure payment is sent to <strong>@BinduGupta</strong> on Venmo or via Zelle at <strong>774-253-5571</strong> at least 1 day before your session.</p>
+          <h2 id="successTitle">Registration Received</h2>
+          <p id="successMsg1">Thank you for registering with Yoga With Bindu. Your form has been submitted and Bindu will be in touch within 1–2 business days to confirm your session.</p>
+          <p id="successMsg2">Please ensure payment is sent to <strong>@BinduGupta</strong> on Venmo or via Zelle at <strong>774-253-5571</strong> at least 1 day before your session.</p>
           <a href="index.html" class="form-btn-next" style="display:inline-block; margin-top: 2rem; text-decoration:none;">Return Home</a>
         </div>
       </div>

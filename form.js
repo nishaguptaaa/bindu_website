@@ -40,6 +40,24 @@ function showStep(stepId, stepNum) {
   currentStepNum = stepNum;
   updateProgress(stepNum);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Switch waiver content based on service when reaching step 5
+  if (stepId === 'step5') {
+    const isDots = selectedService === 'dots';
+    document.getElementById('waiverHeaderFull').style.display = isDots ? 'none' : 'block';
+    document.getElementById('waiverHeaderDots').style.display = isDots ? 'block' : 'none';
+    document.getElementById('waiverTextFull').style.display = isDots ? 'none' : 'block';
+    document.getElementById('waiverTextDots').style.display = isDots ? 'block' : 'none';
+    document.getElementById('waiverCheckboxLabel').textContent = isDots
+      ? 'I have read the event agreement above and agree to its terms.'
+      : 'I have read the full waiver and agree to its terms. I understand this is a legally binding agreement.';
+    document.getElementById('submitNote').textContent = isDots
+      ? 'After submitting, Bindu will be in touch within 1–2 business days to discuss your event and provide a custom quote.'
+      : 'After submitting, Bindu will be in touch within 1–2 business days to confirm your session details.';
+    document.getElementById('submitBtn').textContent = isDots
+      ? 'Submit Inquiry'
+      : 'Submit Registration';
+  }
 }
 
 // Next step
@@ -267,6 +285,13 @@ async function submitForm() {
     showStep('stepSuccess', 6);
     document.getElementById('formProgress').style.display = 'none';
     document.getElementById('stepLabel').style.display = 'none';
+
+    // Update success message for dots
+    if (selectedService === 'dots') {
+      document.getElementById('successTitle').textContent = 'Inquiry Received';
+      document.getElementById('successMsg1').textContent = 'Thank you for your interest in a Dots With Bindu event! Bindu will be in touch within 1–2 business days to discuss your event and provide a custom quote.';
+      document.getElementById('successMsg2').textContent = 'In the meantime, feel free to reach out directly at doyogawithbindu@gmail.com or 774-253-5571.';
+    }
 
   } catch (error) {
     console.error('Submission error:', error);
