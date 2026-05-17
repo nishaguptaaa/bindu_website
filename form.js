@@ -7,7 +7,7 @@
 // GOOGLE APPS SCRIPT URL
 // After setting up Google Apps Script, paste your Web App URL here:
 // ============================================================
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTtF2Wo7SpfEV0bnotnUnXzxO0NyhyZvuDKVn3xBYXvw0ndFLXhLC2enAQ40kMPcj_/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVERtHPOtN7W_I_SYwhDqQpB1WtHfLgckUlyG3F39TUq8dQN5sz5DSstEDjApTqE9S/exec';
 
 // Track current step and selected service
 let currentStep = 'step1';
